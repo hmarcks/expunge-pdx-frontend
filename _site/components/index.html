@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Components</title>
+    <meta name="description" content="Search records for possible expungement">
+    <!-- Add FAVICON -->
+    <!-- Keep tachyons local instead of linked to reduce a request? -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <!-- Eventually create a SVG sprite system -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Update directory when we have SCSS compiling -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- Google analytics? -->
+</head>
+
+
+  <ul class="white bg-black flex f7 pa3">
+  <h2 class="fw7 mr3">SITE:</h2>
+  <li><a class="link underline hover-pink mr3" href="/log-in">Log in to app</a></li>
+  <li><a class="link underline hover-pink mr3" href="/">Log in to OECI (index)</a></li>
+  <li><a class="link underline hover-pink mr3" href="/search">Search</a></li>
+  <li><a class="link underline hover-pink mr3" href="/account">Account</a></li>
+  <li><a class="link underline hover-pink mr3" href="/components">Components</a></li>
+  <h2 class="fw7 mr3">OTHER:</h2>
+  <li><a class="link underline hover-pink mr3" href="https://github.com/hmarcks/expunge-pdx-frontend">Github repo</a></li>
+</ul>
+
+
+  <body class="bg-gray-blue black-60">
+
+    <main class="mw8 ph2 center">
+  <section class="cf mv6 pa4 bg-white shadow br3">
+    <h1 class="mb4 f4 fw6">Misc components</h1>
+    <p class="mb3">Loading button:</p>
+    <button name="search" class="br2 bg-gray white db pv3 ph4 mb4"><span class="spinner spinner--light mr2"></span>Log In</button>
+    <button class="bg-blue white db br2 pv3 ph4 loading-btn mb4">Save</button>
+  </section>
+</main>
+
+
+    <footer class="mt6 pt4 pb5 ph3 black-50 bg-white center">
+    <p class="f6"><a class="link underline hover-blue" href="#">Terms of use</a></p>
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,5 @@
+name: Record Expunge PDX Frontend
+markdown: kramdown
+sass:
+  sass_dir: _scss
+github: [metadata]

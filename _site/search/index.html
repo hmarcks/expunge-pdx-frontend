@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Records</title>
+    <meta name="description" content="Search records for possible expungement">
+    <!-- Add FAVICON -->
+    <!-- Keep tachyons local instead of linked to reduce a request? -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <!-- Eventually create a SVG sprite system -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Update directory when we have SCSS compiling -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- Google analytics? -->
+</head>
+
+
+  <ul class="white bg-black flex f7 pa3">
+  <h2 class="fw7 mr3">SITE:</h2>
+  <li><a class="link underline hover-pink mr3" href="/log-in">Log in to app</a></li>
+  <li><a class="link underline hover-pink mr3" href="/">Log in to OECI (index)</a></li>
+  <li><a class="link underline hover-pink mr3" href="/search">Search</a></li>
+  <li><a class="link underline hover-pink mr3" href="/account">Account</a></li>
+  <li><a class="link underline hover-pink mr3" href="/components">Components</a></li>
+  <h2 class="fw7 mr3">OTHER:</h2>
+  <li><a class="link underline hover-pink mr3" href="https://github.com/hmarcks/expunge-pdx-frontend">Github repo</a></li>
+</ul>
+
+
+  <body class="bg-gray-blue black-60">
+
+    <nav class="center pt4 ph2 bg-white shadow">
+  <div class="mw8 center flex-l justify-between">
+    <div class="mb4">
+      <svg className="logo" width="116" height="41" viewBox="0 0 116 41" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="91.276%" y1="143.962%" x2="12.051%" y2="143.962%" id="a"><stop stop-color="#65B5F0" stop-opacity="0" offset="0%"/><stop stop-color="#357EDD" offset="100%"/></linearGradient><linearGradient x1="63.216%" y1="143.962%" x2="0%" y2="143.962%" id="b"><stop stop-color="#65B5F0" stop-opacity="0" offset="0%"/><stop stop-color="#357EDD" offset="100%"/></linearGradient><linearGradient x1="100%" y1="143.962%" x2="41.365%" y2="143.962%" id="c"><stop stop-color="#65B5F0" stop-opacity="0" offset="0%"/><stop stop-color="#357EDD" offset="100%"/></linearGradient><linearGradient x1="81.342%" y1="143.962%" x2="0%" y2="143.962%" id="d"><stop stop-color="#65B5F0" stop-opacity="0" offset="0%"/><stop stop-color="#357EDD" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M50.188 16.341c.084.168.147.357.147.546 0 .651-.504 1.281-1.281 1.281-.567 0-.924-.252-1.134-.693l-2.457-5.061h-4.221v4.473c0 .714-.567 1.281-1.281 1.281a1.273 1.273 0 0 1-1.281-1.281V5.295c0-.714.567-1.281 1.281-1.281h5.397c3.486 0 4.977 1.722 4.977 4.2 0 1.638-.714 3.045-2.31 3.738l2.163 4.389zm-2.436-8.106c0-.924-.63-1.869-2.037-1.869h-4.473v3.843h4.473c1.407 0 2.037-1.029 2.037-1.974zm12.961 5.208c0 .399-.252.819-.903.819h-5.586c.126 1.092.819 1.995 2.268 1.995.798 0 1.449-.231 1.932-.609.294-.231.546-.42.924-.42.63 0 1.008.399 1.008.924 0 .588-.462.987-.903 1.26-.693.441-1.617.84-3.066.84-3.15 0-4.788-2.184-4.788-4.809 0-2.772 1.995-4.809 4.746-4.809 2.625 0 4.368 2.058 4.368 4.809zm-2.394-.966c-.189-.966-.861-1.827-1.974-1.827-1.155 0-1.953.756-2.079 1.827h4.053zm8.635-3.843c1.491 0 2.625.567 3.234 1.239.231.252.357.504.357.861 0 .567-.399.966-.987.966-.336 0-.546-.084-.777-.252-.336-.252-.903-.672-1.806-.672-1.617 0-2.457 1.26-2.457 2.667 0 1.407.84 2.667 2.457 2.667.903 0 1.47-.42 1.806-.672.231-.168.441-.252.777-.252.588 0 .987.399.987.966 0 .357-.126.609-.357.861-.609.672-1.743 1.239-3.234 1.239-3.045 0-4.956-2.121-4.956-4.809s1.911-4.809 4.956-4.809zm14.368 4.809c0 2.646-1.974 4.809-4.809 4.809s-4.809-2.163-4.809-4.809c0-2.646 1.974-4.809 4.809-4.809s4.809 2.163 4.809 4.809zm-2.478 0c0-1.407-.882-2.625-2.331-2.625-1.449 0-2.331 1.218-2.331 2.625s.882 2.625 2.331 2.625c1.449 0 2.331-1.218 2.331-2.625zm9.962-3.675c0 .63-.462 1.134-1.134 1.134-1.491 0-2.457 1.029-2.457 2.73v3.276c0 .693-.567 1.26-1.26 1.26-.693 0-1.281-.567-1.281-1.26V9.999c0-.756.525-1.281 1.281-1.281.693 0 1.26.588 1.26 1.281v.231c.441-1.008 1.239-1.596 2.457-1.596.735 0 1.134.504 1.134 1.134zm9.416-4.662v11.802c0 .693-.483 1.26-1.218 1.26s-1.218-.588-1.218-1.281v-.126c-.609.924-1.638 1.491-2.877 1.491-2.793 0-4.263-2.331-4.263-4.809s1.491-4.809 4.263-4.809c1.092 0 2.163.462 2.793 1.491V5.106c0-.693.567-1.26 1.26-1.26.693 0 1.26.567 1.26 1.26zm-7.056 8.337c0 1.47.84 2.667 2.289 2.667 1.449 0 2.247-1.26 2.247-2.667 0-1.407-.819-2.667-2.247-2.667-1.449 0-2.289 1.197-2.289 2.667zM49.075 34.824c0 .672-.546 1.176-1.218 1.176h-7.875a1.29 1.29 0 0 1-1.302-1.281V23.295a1.29 1.29 0 0 1 1.302-1.281h7.56c.672 0 1.218.504 1.218 1.176 0 .672-.546 1.197-1.218 1.197h-6.3v3.339h3.465c.651 0 1.197.525 1.197 1.197s-.546 1.176-1.197 1.176h-3.465v3.528h6.615c.672 0 1.218.525 1.218 1.197zm2.314-8.106c.315 0 .588.126.798.378l2.184 2.625 2.184-2.625c.21-.252.483-.378.798-.378.714 0 1.155.462 1.155 1.092a.992.992 0 0 1-.273.714l-2.457 2.898 2.52 2.94c.168.21.252.42.252.714 0 .609-.525 1.092-1.113 1.092-.336 0-.651-.126-.861-.378l-2.205-2.667-2.205 2.667c-.21.252-.525.378-.861.378-.588 0-1.113-.483-1.113-1.092 0-.294.084-.504.252-.714l2.52-2.94-2.457-2.898a.992.992 0 0 1-.273-.714c0-.63.441-1.092 1.155-1.092zm9.118 12.117V27.978c0-.693.483-1.26 1.218-1.26s1.218.588 1.218 1.281v.126c.609-.924 1.638-1.491 2.877-1.491 2.793 0 4.263 2.331 4.263 4.809s-1.491 4.809-4.263 4.809c-1.092 0-2.163-.462-2.793-1.491v4.074c0 .693-.567 1.26-1.26 1.26-.693 0-1.26-.567-1.26-1.26zm7.056-7.392c0-1.47-.84-2.667-2.289-2.667-1.449 0-2.247 1.26-2.247 2.667 0 1.407.819 2.667 2.247 2.667 1.449 0 2.289-1.197 2.289-2.667zm4.225.462v-3.927c0-.693.567-1.26 1.26-1.26.693 0 1.26.567 1.26 1.26v4.116c0 1.134.756 1.932 1.932 1.932s1.932-.798 1.932-1.932v-4.116c0-.693.567-1.26 1.26-1.26.693 0 1.26.567 1.26 1.26v3.927c0 2.52-1.911 4.347-4.452 4.347s-4.452-1.827-4.452-4.347zm10.534-.924c0-2.52 1.911-4.347 4.452-4.347s4.452 1.827 4.452 4.347v3.927c0 .693-.567 1.26-1.26 1.26-.693 0-1.26-.567-1.26-1.26v-4.116c0-1.134-.756-1.932-1.932-1.932s-1.932.798-1.932 1.932v4.116c0 .693-.567 1.26-1.26 1.26-.693 0-1.26-.567-1.26-1.26v-3.927zm19.585 4.452c0 3.003-1.596 4.662-5.019 4.662-1.26 0-2.478-.357-3.297-.777-.42-.21-.672-.588-.672-1.008 0-.651.441-.924 1.008-.924.399 0 .756.168 1.218.357.441.168.987.357 1.785.357 1.827 0 2.457-.819 2.457-2.52v-1.197c-.63 1.029-1.701 1.491-2.793 1.491-2.772 0-4.263-2.142-4.263-4.62s1.47-4.62 4.263-4.62c1.239 0 2.268.567 2.877 1.491v-.126c0-.714.483-1.281 1.218-1.281s1.218.567 1.218 1.26v7.455zm-7.056-4.179c0 1.407.84 2.478 2.289 2.478 1.428 0 2.247-1.155 2.247-2.478 0-1.323-.798-2.478-2.247-2.478-1.449 0-2.289 1.071-2.289 2.478zm17.68.189c0 .399-.252.819-.903.819h-5.586c.126 1.092.819 1.995 2.268 1.995.798 0 1.449-.231 1.932-.609.294-.231.546-.42.924-.42.63 0 1.008.399 1.008.924 0 .588-.462.987-.903 1.26-.693.441-1.617.84-3.066.84-3.15 0-4.788-2.184-4.788-4.809 0-2.772 1.995-4.809 4.746-4.809 2.625 0 4.368 2.058 4.368 4.809zm-2.394-.966c-.189-.966-.861-1.827-1.974-1.827-1.155 0-1.953.756-2.079 1.827h4.053z" fill="#666"/><path fill="#FFF" d="M3 3h29v34H3z"/><path d="M26 21.73v1.46a.756.756 0 0 1-.26.567c-.172.162-.345.243-.517.243H7.777c-.172 0-.345-.081-.518-.243A.756.756 0 0 1 7 23.189v-1.46c0-.27.086-.432.26-.486.172-.162.345-.243.517-.243h17.446c.172 0 .345.081.518.243.173.054.259.216.259.487z" fill="url(#a)"/><path d="M26 9.73v1.46a.756.756 0 0 1-.26.567c-.172.162-.345.243-.517.243H7.777c-.172 0-.345-.081-.518-.243A.756.756 0 0 1 7 11.189V9.73c0-.27.086-.432.26-.486.172-.162.345-.243.517-.243h17.446c.172 0 .345.081.518.243.173.054.259.216.259.487z" fill="url(#b)"/><path d="M26 27.73v1.54c0 .162-.086.325-.26.487-.172.162-.345.243-.517.243H7.777c-.172 0-.345-.081-.518-.243-.173-.162-.259-.325-.259-.487v-1.54c0-.216.086-.379.26-.487.172-.162.345-.243.517-.243h17.446c.172 0 .345.081.518.243.173.108.259.27.259.487z" fill="url(#c)"/><path d="M26 15.73v1.54c0 .162-.086.325-.26.487-.172.162-.345.243-.517.243H7.777c-.172 0-.345-.081-.518-.243-.173-.162-.259-.325-.259-.487v-1.54c0-.216.086-.379.26-.487.172-.162.345-.243.517-.243h17.446c.172 0 .345.081.518.243.173.108.259.27.259.487z" fill="url(#d)"/><rect stroke="#357EDD" stroke-width="3" x="2.5" y="2.5" width="29" height="35" rx="4"/></g></svg>
+
+    </div>
+    <div class="dib mb4">
+      <a class="link hover-blue f6 f5-ns dib pa3" href="/search">Search</a>
+      <a class="link hover-blue f6 f5-ns dib pa3" href="/stats">Stats</a>
+      <a class="link hover-blue f6 f5-ns dib pa3" href="/admin">Admin</a>
+      <a class="link hover-blue f6 f5-ns dib pa3" href="/account">Account</a>
+      <a class="link hover-blue f6 f5-ns dib pa3" href="/log-in">Log Out</a>
+    </div>
+  </div>
+</nav>
+
+
+<main class="mw8 ph2 center">
+
+  <section class="cf mt4 mb3 pa3 pa4-l bg-white shadow br3">
+    <h1 class="mb4 f4 fw6">Record Search</h1>
+    <form>
+      <div class="flex flex-wrap items-end">
+      <div class="w-100 w-30-ns mb3 pr1-ns">
+        <label for="input1" class="db mb1 fw6">
+          First Name
+        </label>
+        <input id="input1" type="text" class="w-100 pa3 br2 b--black-10">
+      </div>
+      <div class="w-100 w-30-ns mb3 pr1-ns">
+        <label for="input2" class="db mb1 fw6">
+          Last Name
+        </label>
+        <input id="input2" type="text" class="w-100 pa3 br2 b--black-10">
+      </div>
+      <div class="w-100 w-30-ns mb3 pr1-ns">
+        <label for="input3" class="db mb1 fw6">
+          Date of Birth <span class="fw2 f6">MM/DD/YYYY</span>
+        </label>
+        <input id="input3" type="text" class="w-100 pa3 br2 b--black-10">
+      </div>
+      <div class="w-100 w-10-ns mb3">
+        <button class="br2 bg-blue white db w-100 tc pv3 btn--search" aria-label="Search" title="Search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="mv4">
+    <!-- Show if missing a field on submit -->
+    <div class="bg-washed-red mv4 pa3 br3 fw6">All search fields are required.</div>
+    <!-- Show if the date format is incorrect. We should also allow for "-" along with "/" and not worry about leading zeros. -->
+    <div class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</div>
+    <!-- Show if any of the services are down. If there's no internet connection we would ideally have a different message, but that's a nice-to-have. -->
+    <div class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</div>
+    <!-- Show this loading indicator while generating results. -->
+    <div class="bg-white mv4 pa4 br3 fw6"><span class="spinner mr2"></span>Loading your search results...</div>
+    <!-- Show if we can't find results. -->
+    <div class="bg-light-gray mv4 pa4 br3 fw6">No search results found :(</div>
+  </section>
+
+  <section class="bg-white shadow br3 br--top">
+    <div class="pa3">
+      <h1 class="gray pv2">Results for {firstname lastname}</h1>
+    </div>
+
+    <div class="flex-l bt b--light-gray record--eligible">
+      <div class="w-100 w-30-l pt4 pr3 pl4">
+        <div class="mb4">
+          <!-- IF eligible now -->
+          <span class="fw6 green bg-washed-green br-pill pv2 ph3">Eligible now</span>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF type eligible -->
+          <i class="absolute fas fa-check-circle green"></i>
+          <div class="ml3 pl1"><span class="fw7">Time:</span> Eligible now</div>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF type eligible -->
+          <i class="absolute fas fa-check-circle green"></i>
+          <div class="ml3 pl1"><span class="fw7">Type:</span> Eligible {section}</div>
+        </div>
+      </div>
+      <div class="w-100 w-70-l pv4 pr3 pl4">
+        <ul>
+          <li class="mb3">
+            <span class="fw7">Charge: </span>4759924B - Poss Controlled Sub 2
+          </li>
+          <li class="mb3">
+            <span class="fw7">Disposition: </span>Dismissed
+          </li>
+          <li class="mb3">
+            <!-- IF not convicted -->
+            <span class="fw7">Arrested: </span>2/12/2007
+          </li>
+          <li class="mb3">
+            <span class="fw7">Balance: </span>–
+          </li>
+          <li class="mb3">
+            <span class="fw7">Case: </span>
+            <a class="underline" href="#">
+              ZA0061902
+              <i class="pl1 silver fas fa-external-link-square-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex-l bt b--light-gray record--future">
+      <div class="w-100 w-30-l pt4 pr3 pl4">
+        <div class="mb4">
+          <!-- IF eligible in future -->
+          <span class="fw6 blue bg-washed-blue br-pill pv2 ph3">Eligible {mm/dd/yyyy}</span>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF time eligible in future -->
+          <i class="absolute fas fa-clock blue"></i>
+          <div class="ml3 pl1"><span class="fw7">Time:</span> 10 years from most recent conviction</div>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF type eligible -->
+          <i class="absolute fas fa-check-circle green"></i>
+          <div class="ml3 pl1"><span class="fw7">Type:</span> Eligible {section}</div>
+        </div>
+      </div>
+      <div class="w-100 w-70-l pv4 pr3 pl4">
+        <ul>
+          <li class="mb3">
+            <span class="fw7">Charge: </span>4759924B - Poss Controlled Sub 2
+          </li>
+          <li class="mb3">
+            <span class="fw7">Disposition: </span>Dismissed
+          </li>
+          <li class="mb3">
+            <span class="fw7">Arrested: </span>2/12/2007
+          </li>
+          <li class="mb3">
+            <span class="fw7">Balance: </span>–
+          </li>
+          <li class="mb3">
+            <span class="fw7">Case: </span>
+            <a class="underline" href="#">
+              ZA0061902
+              <i class="pl1 silver fas fa-external-link-square-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex-l bt b--light-gray record--review">
+      <div class="w-100 w-30-l pt4 pr3 pl4">
+        <div class="mb4">
+          <!-- IF eligible in future, but needs review -->
+          <span class="fw6 purple bg-washed-purple br-pill pv2 ph3 nowrap">Eligible {mm/dd/yyyy} (review)</span>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF time eligible in future -->
+          <i class="absolute fas fa-clock blue"></i>
+          <div class="ml3 pl1"><span class="fw7">Time:</span> {time rule}</div>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF type eligible -->
+          <i class="absolute fas fa-question-circle purple"></i>
+          <div class="ml3 pl1"><span class="fw7">Type:</span> {review reason}</div>
+        </div>
+      </div>
+      <div class="w-100 w-70-l pv4 pr3 pl4">
+        <ul>
+          <li class="mb3">
+            <span class="fw7">Charge: </span>4759924B - Poss Controlled Sub 2
+          </li>
+          <li class="mb3">
+            <span class="fw7">Disposition: </span>Dismissed
+          </li>
+          <li class="mb3">
+            <span class="fw7">Arrested: </span>2/12/2007
+          </li>
+          <li class="mb3">
+            <span class="fw7">Balance: </span>–
+          </li>
+          <li class="mb3">
+            <span class="fw7">Case: </span>
+            <a class="underline" href="#">
+              ZA0061902
+              <i class="pl1 silver fas fa-external-link-square-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- IF ineligible -->
+    <div class="flex-l bt b--light-gray record--ineligible">
+      <div class="w-100 w-30-l pt4 pr3 pl4">
+        <div class="mb4">
+          <!-- IF ineligible -->
+          <span class="fw6 red bg-washed-red br-pill pv2 ph3">Ineligible</span>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF time eligible in future -->
+          <i class="absolute fas fa-clock blue"></i>
+          <div class="ml3 pl1"><span class="fw7">Time:</span> {time rule}</div>
+        </div>
+        <div class="relative mb3 ml3">
+          <!-- IF type ineligible -->
+          <i class="absolute fas fa-times-circle red"></i>
+          <div class="ml3 pl1"><span class="fw7">Type:</span> {review reason}</div>
+        </div>
+      </div>
+      <div class="w-100 w-70-l pv4 pr3 pl4">
+        <ul>
+          <li class="mb3">
+            <span class="fw7">Charge: </span>2359924B - Ineligible type
+          </li>
+          <li class="mb3">
+            <span class="fw7">Disposition: </span>Dismissed
+          </li>
+          <li class="mb3">
+            <span class="fw7">Arrested: </span>2/12/2007
+          </li>
+          <li class="mb3">
+            <span class="fw7">Balance: </span>–
+          </li>
+          <li class="mb3">
+            <span class="fw7">Case: </span>
+            <a class="underline" href="#">
+              ZA0061902
+              <i class="pl1 silver fas fa-external-link-square-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt5 mb5 mw6 lh-copy">
+    <h1 class="fw6 mb3">Other requirements:</h1>
+    <ul>
+      <li class="mb3">For convictions, you must have completed all of the requirements imposed upon you by the court and completed your term of probation.</li>
+      <li class="mb3">Outstanding balances will be manually reviewed.</li>
+    </ul>
+  </section>
+</main>
+
+
+
+    <footer class="mt6 pt4 pb5 ph3 black-50 bg-white center">
+    <p class="f6"><a class="link underline hover-blue" href="#">Terms of use</a></p>
+</footer>
+
+
+  </body>
+
+</html>
