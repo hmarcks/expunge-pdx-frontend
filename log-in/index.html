@@ -4,6 +4,7 @@ title: Log in to Record Expunge
 ---
 
 <main class="mw6 ph2 center">
+
   <section class="cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
     {% include svg/logo.svg %}
     <label for="input1" class="db mt4 mb1 fw6">
@@ -14,9 +15,41 @@ title: Log in to Record Expunge
       Password
     </label>
     <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
-    <a class="br2 bg-blue white db w-100 fw6 tc mb4 pv3 hover-bg--dark-blue" href="/">Log In</a>
+    <a class="{% include button.html %}" href="/">Log In</a>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">All fields are required.</div>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">User ID and password do not match.</div>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
     <div class="tc">
       <a class="link underline" href="#">Forgot your password?</a>
     </div>
   </section>
+
+  <section class="cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
+    {% include svg/logo.svg %}
+    <h1 class="f4 fw7 mt4">Forgot your password?</h1>
+    <label for="input1" class="db mt4 mb1 fw6">
+      Email
+    </label>
+    <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
+    <a class="{% include button.html %}" href="#">Send email to reset password</a>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">Please enter your email.</div>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
+    <div class="bg-washed-green mb4 pa3 br3 fw6">Thanks, we're sending an email that will help you reset your password.</div>
+    <div class="tc">
+      <a class="link underline" href="#">Return to log in</a>
+    </div>
+  </section>
+
+  <section class="cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
+    {% include svg/logo.svg %}
+    <h1 class="f4 fw7 mt4">Set your password</h1>
+    <label for="input1" class="db mt4 mb1 fw6">
+      Password
+    </label>
+    <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
+    <a class="{% include button.html %}" href="#">Set password and log in</a>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">Your password must have at least [n] characters.</div>
+    <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
+  </section>
+
 </main>
