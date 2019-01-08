@@ -25,6 +25,67 @@ title: Components
     <h1 class="f4 fw6 mb3">Components</h1>
     <p class="lh-copy mw7 mb5">This is a small application, but we could consider using <a href="https://github.com/jxnblk/tachyons-components" class="link underline">Tachyons-Components</a> to abstract the styling and allow for overrides (<a href="https://varun.ca/tachyons-components" class="link underline">more info</a>). For now, we'll keep it simple and manually put the css classes in each element / component.</p>
 
+    <p class="mb3"><strong>Colors</strong></p>
+    <div class="flex flex-wrap mb5">
+        <div class="mb3 mr3">
+            <div class="bg-green h3 w5"></div>
+            <div class="bg-gray-blue pa3">$green</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-blue h3 w5"></div>
+            <div class="bg-gray-blue pa3">$blue</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-purple h3 w5"></div>
+            <div class="bg-gray-blue pa3">$purple</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-red h3 w5"></div>
+            <div class="bg-gray-blue pa3">$red</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-washed-green h3 w5"></div>
+            <div class="bg-gray-blue pa3">$washed-green</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-washed-blue h3 w5"></div>
+            <div class="bg-gray-blue pa3">$washed-blue</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-washed-purple h3 w5"></div>
+            <div class="bg-gray-blue pa3">$washed-purple</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-washed-red h3 w5"></div>
+            <div class="bg-gray-blue pa3">$washed-red</div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap mb5">
+        <div class="mb3 mr3">
+            <div class="bg-black-60 h3 w5"></div>
+            <div class="bg-gray-blue pa3">$black-60</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-black-10 h3 w5"></div>
+            <div class="bg-gray-blue pa3">$black-10</div>
+        </div>
+        <div class="mb3 mr3">
+            <div class="bg-gray-blue h3 w5"></div>
+            <div class="bg-gray-blue pa3">$gray-blue</div>
+        </div>
+    </div>
+
+    <p><a href="#" class="link underline hover-blue">Link style</a></p>
+    <code class="bg-near-white pa2 mt3 mb4 db">
+        &lt;a href="#" class="link underline hover-blue"&gt; &#8230;
+    </code>
+
+    <p><a href="#" class="blue link underline hover-black-60">Link style loud</a></p>
+    <code class="bg-near-white pa2 mt3 mb5 db">
+        &lt;a href="#" class="link underline hover-blue"&gt; &#8230;
+    </code>
+
     <section class="bg-white shadow br3 pa3 pa4-ns cf">
     	<p class="mb3"><strong>Card</strong></p>
     	<p class="lh-copy mw6">The padding in the card may vary, but give content room to breate on larger screens, and you will likely need to need to decrease it on smaller screens.</p>
@@ -46,13 +107,24 @@ title: Components
     <code class="bg-near-white pa2 mt3 mb5 db">
     	&lt;button class="loading-btn bg-navy white fw6 br2 pv3 ph4 db"&gt; &#8230;
     </code>
+
+    <label class="db mb1 fw6">
+      Input
+    </label>
+    <input type="text" class="pa3 br2 b--black-10">
+    <code class="bg-near-white pa2 mt3 mb2 db">
+        &lt;label class="db mb1 fw6"&gt; &#8230;
+    </code>
+    <code class="bg-near-white pa2 mb5 db">
+        &lt;input class="pa3 br2 b--black-10"&gt; &#8230;
+    </code>
     
-		<div class="bg-washed-green fw6 br3 pa3">
-			Success message
-		</div>
-		<code class="bg-near-white pa2 mt3 mb5 db">
-			&lt;div class="bg-washed-green fw6 br3 pa3"&gt; &#8230;
-		</code>
+	<div class="bg-washed-green fw6 br3 pa3">
+		Success message
+	</div>
+	<code class="bg-near-white pa2 mt3 mb5 db">
+		&lt;div class="bg-washed-green fw6 br3 pa3"&gt; &#8230;
+	</code>
 
     <div class="bg-washed-red fw6 br3 pa3">
     	Error message
