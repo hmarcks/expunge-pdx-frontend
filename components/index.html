@@ -5,107 +5,92 @@ title: Components
 
 <main class="mw8 center ph2">
 
-	<h1 class="f3 fw6 mv4">Design System</h1>
+  <h1 class="f3 fw6 mt4 mb3">Design System</h1>
 
-	<p class="f4 lh-copy mw7 mb4">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
+  <p class="f4 lh-copy mw7 mb4">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
 
-	<p class="lh-copy mw7 mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like modular/BEM. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as colors to offer higher contrast).</p>
+  <section class="cf bg-white shadow br3 pa4 mb5">
+    <h1 class="f4 fw6 mb3">CSS Framework</h1>
 
-	<p class="fw6 mb3"><a href="https://tachyons.io/docs" class="link underline">Some common Tachyons documentation:</a></p>
-	<ul class="mb4">
-		<li class="pl3 mb3"><a href="https://tachyons.io/docs/typography/scale" class="link underline">Typography Scale</a></li>
-		<li class="pl3 mb3"><a href="https://tachyons.io/docs/typography/font-weight" class="link underline">Font Weight</a></li>
-		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/spacing" class="link underline">Spacing (padding / margin)</a></li>
-		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/display" class="link underline">Display</a></li>
-		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/max-widths" class="link underline">Max Width</a></li>
-	</ul>
+  	<p class="lh-copy measure-wide mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like modular/BEM. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as colors to offer higher contrast).</p>
 
-  <section class="cf bg-white shadow br3 pa4 mv5">
+  	<p class="fw6 mb3"><a href="https://tachyons.io/docs" class="link underline">Some common Tachyons documentation:</a></p>
+  	<ul class="pb4 mb4 bb b--black-10">
+  		<li class="pl3 mb3"><a href="https://tachyons.io/docs/typography/scale" class="link underline">Typography Scale</a></li>
+  		<li class="pl3 mb3"><a href="https://tachyons.io/docs/typography/font-weight" class="link underline">Font Weight</a></li>
+  		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/spacing" class="link underline">Spacing (padding / margin)</a></li>
+  		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/display" class="link underline">Display</a></li>
+  		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/max-widths" class="link underline">Max Width</a></li>
+  	</ul>
 
-    <h1 class="f4 fw6 mb3">Components</h1>
-    <p class="lh-copy mw7 mb5">This is a small application, but we could consider using <a href="https://github.com/jxnblk/tachyons-components" class="link underline">Tachyons-Components</a> to abstract the styling and allow for overrides (<a href="https://varun.ca/tachyons-components" class="link underline">more info</a>). For now, we'll keep it simple and manually put the css classes in each element / component.</p>
+    <h1 class="f4 fw6 mb3">Custom Components</h1>
+    <p class="lh-copy measure-wide mb4">This is a small application, but we could consider using <a href="https://github.com/jxnblk/tachyons-components" class="link underline">Tachyons-Components</a> to abstract the styling and allow for overrides (<a href="https://varun.ca/tachyons-components" class="link underline">more info</a>). For now, we'll keep it simple and manually put the css classes in each element / component.</p>
 
     <p class="mb3"><strong>Colors</strong></p>
-    <div class="flex flex-wrap mb5">
-        <div class="mb3 mr3">
-            <div class="bg-green h3 w5"></div>
-            <div class="bg-gray-blue pa3">$green</div>
+    <p class="lh-copy mb4 measure-wide">The main colors used are blue and gray. Blue should carry the main call to action for a view. The other colors are used mainly for search result categories and alerts. To ensure there is sufficient contrast (WCAG 2 AA standards) when combining colors, you can use this <a href="https://snook.ca/technical/colour_contrast/colour.html" class="link underline">Color Contrast Check Tool</a>. A good tool for simulating color blindness is <a href="http://colororacle.org" class="link underline">Color Oracle</a>.</p>
+    <div class="flex flex-wrap">
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-green white pa3">$green</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-blue h3 w5"></div>
-            <div class="bg-gray-blue pa3">$blue</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-blue white pa3">$blue</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-purple h3 w5"></div>
-            <div class="bg-gray-blue pa3">$purple</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-purple white pa3">$purple</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-red h3 w5"></div>
-            <div class="bg-gray-blue pa3">$red</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-red white pa3">$red</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-washed-green h3 w5"></div>
-            <div class="bg-gray-blue pa3">$washed-green</div>
+    </div>
+    <div class="flex flex-wrap">
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-washed-green pa3">$washed-green</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-washed-blue h3 w5"></div>
-            <div class="bg-gray-blue pa3">$washed-blue</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-washed-blue pa3">$washed-blue</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-washed-purple h3 w5"></div>
-            <div class="bg-gray-blue pa3">$washed-purple</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-washed-purple pa3">$washed-purple</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-washed-red h3 w5"></div>
-            <div class="bg-gray-blue pa3">$washed-red</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-washed-red pa3">$washed-red</div>
         </div>
     </div>
 
     <div class="flex flex-wrap mb5">
-        <div class="mb3 mr3">
-            <div class="bg-black-60 h3 w5"></div>
-            <div class="bg-gray-blue pa3">$black-60</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-black-60 white pa3">$black-60</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-black-10 h3 w5"></div>
-            <div class="bg-gray-blue pa3">$black-10</div>
+        <div class="mb3 w-50 w-25-l">
+            <div class="bg-black-10 pa3">$black-10</div>
         </div>
-        <div class="mb3 mr3">
-            <div class="bg-gray-blue h3 w5"></div>
+        <div class="mb3 w-50 w-25-l">
             <div class="bg-gray-blue pa3">$gray-blue</div>
         </div>
     </div>
 
-    <p><a href="#" class="link underline hover-blue">Link style</a></p>
+    <p><a href="#" class="link underline hover-blue">Link style gray</a></p>
     <code class="bg-near-white pa2 mt3 mb4 db">
         &lt;a href="#" class="link underline hover-blue"&gt; &#8230;
     </code>
 
-    <p><a href="#" class="blue link underline hover-black-60">Link style loud</a></p>
+    <p><a href="#" class="blue link underline hover-black-60">Link style blue</a></p>
     <code class="bg-near-white pa2 mt3 mb5 db">
-        &lt;a href="#" class="link underline hover-blue"&gt; &#8230;
+        &lt;a href="#" class="blue link underline hover-blue"&gt; &#8230;
     </code>
 
-    <section class="bg-white shadow br3 pa3 pa4-ns cf">
-    	<p class="mb3"><strong>Card</strong></p>
-    	<p class="lh-copy mw6">The padding in the card may vary, but give content room to breate on larger screens, and you will likely need to need to decrease it on smaller screens.</p>
-    </section>
-    <code class="bg-near-white pa2 mt3 mb5 db">
-    	&lt;section class="bg-white shadow br3 pa3 pa4-ns cf"&gt; &#8230;
-    </code>
-    
     <button class="bg-blue white bg-animate hover-bg-dark-blue fw6 tc br2 pv3 ph4">
-    	Button
+      Button
     </button>
     <code class="bg-near-white pa2 mt3 mb5 db">
-    	&lt;button class="bg-blue white bg-animate hover-bg-dark-blue fw6 tc br2 pv3 ph4 db"&gt; &#8230;
+      &lt;button class="bg-blue white bg-animate hover-bg-dark-blue fw6 tc br2 pv3 ph4 db"&gt; &#8230;
     </code>
     
     <button class="loading-btn bg-navy white fw6 br2 pv3 ph4">
-    	Loading button
+      Loading button
     </button>
     <code class="bg-near-white pa2 mt3 mb5 db">
-    	&lt;button class="loading-btn bg-navy white fw6 br2 pv3 ph4 db"&gt; &#8230;
+      &lt;button class="loading-btn bg-navy white fw6 br2 pv3 ph4 db"&gt; &#8230;
     </code>
 
     <label class="db mb1 fw6">
@@ -119,18 +104,26 @@ title: Components
         &lt;input class="pa3 br2 b--black-10"&gt; &#8230;
     </code>
     
-	<div class="bg-washed-green fw6 br3 pa3">
-		Success message
-	</div>
-	<code class="bg-near-white pa2 mt3 mb5 db">
-		&lt;div class="bg-washed-green fw6 br3 pa3"&gt; &#8230;
-	</code>
+  	<div class="bg-washed-green fw6 br3 pa3">
+  		Success message
+  	</div>
+  	<code class="bg-near-white pa2 mt3 mb5 db">
+  		&lt;div class="bg-washed-green fw6 br3 pa3"&gt; &#8230;
+  	</code>
 
     <div class="bg-washed-red fw6 br3 pa3">
     	Error message
     </div>
     <code class="bg-near-white pa2 mt3 mb5 db">
     	&lt;div class="bg-washed-red fw6 br3 pa3"&gt; &#8230;
+    </code>
+
+    <section class="bg-white shadow br3 pa3 pa4-ns cf">
+      <p class="mb3"><strong>Card</strong></p>
+      <p class="lh-copy mw6">The padding in the card may vary, but give content room to breate on larger screens, and you will likely need to need to decrease it on smaller screens.</p>
+    </section>
+    <code class="bg-near-white pa2 mt3 mb5 db">
+      &lt;section class="bg-white shadow br3 pa3 pa4-ns cf"&gt; &#8230;
     </code>
 
   </section>
