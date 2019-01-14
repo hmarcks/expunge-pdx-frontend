@@ -1,7 +1,7 @@
 $gray-blue: #FAFAFE;
 $green: #007B4B;
 $washed-green: #E5F1ED;
-$blue: #00449E;
+$blue: #2b74d2;
 $washed-blue: #E0E7F0;
 $purple: #9619FF;
 $washed-purple: #EFE3FA;
@@ -14,6 +14,8 @@ $washed-red: #F0E0E8;
 .bg-washed-green { background-color:$washed-green }
 
 .blue { color:$blue }
+.bg-blue { background-color:$blue }
+.hover-bg-blue:focus, .hover-bg-blue:hover { background-color:$blue }
 .washed-blue { color:$washed-blue }
 .bg-washed-blue { background-color:$washed-blue }
 

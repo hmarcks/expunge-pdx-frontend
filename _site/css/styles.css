@@ -4,7 +4,11 @@
 
 .bg-washed-green { background-color: #E5F1ED; }
 
-.blue { color: #00449E; }
+.blue { color: #2b74d2; }
+
+.bg-blue { background-color: #2b74d2; }
+
+.hover-bg-blue:focus, .hover-bg-blue:hover { background-color: #2b74d2; }
 
 .washed-blue { color: #E0E7F0; }
 

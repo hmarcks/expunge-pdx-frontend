@@ -21,7 +21,7 @@
   <h1 class="fw8 mr3 pv2 white">Frontend Dev Menu 🍡</h1>
   
   <div class="flex flex-wrap items-center">
-    <h2 class="fw8 mr2 pv2 white">Site Map:</h2>
+    <h2 class="fw8 mr2 pv2 white">Sitemap:</h2>
     <ul class="flex flex-wrap items-center">
       <li class="pv2"><a class="link underline hover-pink mr3" href="/log-in">Log in to app</a></li>
       <li class="pv2"><a class="link underline hover-pink mr3" href="/">Log in to OECI (index)</a></li>
@@ -46,11 +46,11 @@
 
   <body class="bg-gray-blue black-60">
 
-    <main class="mw8 center ph2">
+  	<main class="mw8 center ph2">
 
-  <h1 class="f3 fw6 mt4 mb3">Design System</h1>
+  <h1 class="f3 fw6 ph2 mt4 mb3">Design System</h1>
 
-  <p class="f4 lh-copy mw7 mb4">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
+  <p class="f4 lh-copy mw7 ph2 mb4">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
 
   <section class="cf bg-white shadow br3 pa4 mb5">
     <h1 class="f4 fw6 mb3">CSS Framework</h1>
@@ -76,42 +76,45 @@
     <p class="mb3"><strong>Colors</strong></p>
     <p class="lh-copy mb4 measure-wide">The main colors used are blue and gray. Blue should carry the main call to action for a view. The other colors are used mainly for search result categories and alerts. To ensure there is sufficient contrast (WCAG 2 AA standards) when combining colors, you can use this <a href="https://snook.ca/technical/colour_contrast/colour.html" class="link underline">Color Contrast Check Tool</a>. A good tool for simulating color blindness is <a href="http://colororacle.org" class="link underline">Color Oracle</a>.</p>
     <div class="flex flex-wrap">
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-green white pa3">$green</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-blue white pa3">$blue</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
+            <div class="bg-dark-blue white pa3">$dark-blue</div>
+        </div>
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-purple white pa3">$purple</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-red white pa3">$red</div>
         </div>
     </div>
     <div class="flex flex-wrap">
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-washed-green pa3">$washed-green</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-washed-blue pa3">$washed-blue</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-washed-purple pa3">$washed-purple</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-washed-red pa3">$washed-red</div>
         </div>
     </div>
 
     <div class="flex flex-wrap mb6">
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-black-60 white pa3">$black-60</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-black-10 pa3">$black-10</div>
         </div>
-        <div class="mb3 w-50 w-25-l">
+        <div class="mb3 w-50 w-20-l">
             <div class="bg-gray-blue pa3">$gray-blue</div>
         </div>
     </div>
@@ -124,17 +127,17 @@
         &lt;a href="#" class="blue link underline hover-blue"&gt; &#8230;
     </code>
 
-    <button class="bg-blue white bg-animate hover-bg-dark-blue fw6 tc br2 pv3 ph4 mr4">
+    <button class="bg-blue white bg-animate hover-bg-dark-blue fw6 br2 pv3 ph4 mr4">
       Button
     </button>
-    <button class="loading-btn bg-navy white fw6 br2 pv3 ph4">
-      Loading button
+    <button class="loading-btn bg-dark-blue white fw6 br2 pv3 ph4">
+      Loading Button
     </button>
     <code class="bg-near-white pa2 mt3 db">
-      &lt;button class="bg-blue white bg-animate hover-bg-dark-blue fw6 tc br2 pv3 ph4 db"&gt; &#8230;
+      &lt;button class="bg-blue white bg-animate hover-bg-dark-blue fw6 br2 pv3 ph4"&gt; &#8230;
     </code>
     <code class="bg-near-white pa2 mb6 db">
-      &lt;button class="loading-btn bg-navy white fw6 br2 pv3 ph4 db"&gt; &#8230;
+      &lt;button class="loading-btn bg-dark-blue white fw6 br2 pv3 ph4"&gt; &#8230;
     </code>
 
     <label class="db mb1 fw6">
@@ -161,20 +164,23 @@
       &lt;div class="bg-washed-red fw6 br3 pa3"&gt; &#8230;
     </code>
 
-
     <section class="bg-white shadow br3 pa3 pa4-ns cf">
       <p class="mb3"><strong>Card</strong></p>
-      <p class="lh-copy mw6">The padding in the card may vary, but give content room to breate on larger screens, and you will likely need to need to decrease it on smaller screens.</p>
+      <p class="lh-copy measure mb3">The padding in the card may vary, but give content room to breate on larger screens, and you will likely need to need to decrease it on smaller screens.</p>
+      <p class="lh-copy measure">Use the <a href="http://tachyons.io/docs/typography/line-height" class="link underline">Line Height</a> classes to control the line-height of your headlines and body copy. Use the <a href="https://tachyons.io/docs/typography/measure" class="link underline">measure</a> classes to keep the line-length of text between 45–75 characters.</p>
     </section>
-    <code class="bg-near-white pa2 mt3 mb5 db">
+    <code class="bg-near-white pa2 mt3 db">
       &lt;section class="bg-white shadow br3 pa3 pa4-ns cf"&gt; &#8230;
+    </code>
+    <code class="bg-near-white pa2 mb5 db">
+      &lt;p class="lh-copy measure"&gt; &#8230;
     </code>
 
   </section>
 </main>
 
 
-    <footer class="mt6 pt4 pb5 ph3 black-50 bg-white">
+  	<footer class="mt6 pt4 pb5 ph3 black-50 bg-white">
     <p class="f6"><a class="link underline hover-blue" href="#">Terms of use</a></p>
 </footer>
 
