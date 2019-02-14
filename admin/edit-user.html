@@ -3,12 +3,12 @@ layout: site
 title: Add user, edit user, your account
 ---
 
-<main class="mw7 center ph2">
+<main class="mw6 center ph2">
   <section class="cf mt4 mb3 pa3 pa4-l bg-white shadow br3">
     <h1 class="mb4 f4 fw6">Add User</h1>
     <form>
       <div class="flex flex-wrap items-end">
-        <div class="w-100 w-50-ns mb4 pr1-ns">
+        <div class="w-100 w-100-ns mb4 pr1-ns">
           <label for="name" class="db mb2 fw6">
             Name *
           </label>
@@ -16,15 +16,15 @@ title: Add user, edit user, your account
         </div>
       </div>
       <div class="flex flex-wrap items-end">
-        <div class="w-100 w-50-ns mb4 pr1-ns">
+        <div class="w-100 w-100-ns mb4 pr1-ns">
           <label for="email" class="db mb2 fw6">
             Email *
           </label>
-          <input id="email" type="text" class="w-100 pa3 br2 b--black-10" />
+          <input id="email" type="email" class="w-100 pa3 br2 b--black-10" />
         </div>
       </div>
       <div class="flex flex-wrap items-end">
-        <div class="w-100 w-50-ns mb4 pr1-ns">
+        <div class="w-100 w-100-ns mb4 pr1-ns">
           <label for="role" class="db mb2 fw6">
             Role
           </label>
@@ -69,13 +69,13 @@ title: Add user, edit user, your account
         </div>
       </div>
       <div class="flex flex-wrap items-end">
-        <div class="w-100 w-50-ns mb4 pr1-ns">
+        <div class="w-100 w-100-ns mb4 pr1-ns">
           <label for="group" class="db mb2 fw6">
             Group
           </label>
           <select
             id="group"
-            class="w-100 pa3 br2 bw1 b--black-10 input-reset bg-white black-60 indent"
+            class="w-100 pa3 br2 bw1 b--black-10 input-reset bg-white black-60"
           >
             <option value="">
               -- Please select a group --
@@ -87,26 +87,24 @@ title: Add user, edit user, your account
         </div>
       </div>
       <div class="flex flex-wrap items-end">
-        <div class="w-100 w-50-ns mb4 pr1-ns">
-          <ul>
-            <li>
-              New users will get an email notification with a link to set their
-              password.
-            </li>
-          </ul>
+        <div class="w-100 w-100-ns mb4 pr1-ns">
+          <p>
+            New users will get an email notification with a link to set their
+            password.
+          </p>
         </div>
       </div>
 
       <div class="flex flex-wrap items-end">
-        <div class="w-100 w-50-ns mb3">
-          <button
-            class="br2 bg-blue white db w-100 tc pv3 btn--search"
+        <div class="w-100 w-100-ns mb3">
+          <a
+            href="/admin"
+            class="bg-blue white bg-animate hover-bg-dark-blue fw6 br2 pv3 ph4 db w-100 tc"
             aria-label="add-user"
             title="add-user"
-            type="submit"
           >
             Add User
-          </button>
+          </a>
         </div>
       </div>
     </form>
