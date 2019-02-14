@@ -69,17 +69,22 @@ title: Add user, edit user, your account
         <label for="group" class="db mb2 fw6">
           Group
         </label>
-        <select
-          id="group"
-          class="w-100 pa3 br2 bw1 b--black-10 input-reset bg-white black-60"
-        >
-          <option value="">
-            -- Please select a group --
-          </option>
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select>
+        <div class="relative w-100">
+          <select
+            id="group"
+            class="db w-100 pa3 br2 bw1 b--black-10 input-reset bg-white black-60"
+          >
+            <option value="">
+              Please select a group
+            </option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+          <div class="absolute pa3 right-0 top-0 bottom-0 pointer-events-none">
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
       </div>
 
       <div class="mb4">
