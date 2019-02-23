@@ -49,35 +49,78 @@
 
   <body class="bg-gray-blue black-60">
 
-  	<main class="mw8 center ph2">
+  	<main class="mw8 ph3 ph4-ns mt5 cf">
 
-  <h1 class="f3 fw6 ph2 mt4 mb3">Design System</h1>
+  <nav class="fl w-100 w-25-l pr3-l mb5">
+    <ul>
+      <li class="pb3"><a class="link underline" href="#accessibility">Accessibility</a></li>
+      <li class="pb3"><a class="link underline" href="#content">Content</a></li>
+      <li class="pb3"><a class="link underline" href="#layout">Layout</a></li>
+      <li class="pb3"><a class="link underline" href="#cssframework">CSS Framework</a></li>
+      <li class="pb3"><a class="link underline" href="#semantichtml">Semantic HTML</a></li>
+      <li class="pb3"><a class="link underline" href="#keyboardsupport">Keyboard Support</a></li>
+      <li class="pb3"><a class="link underline" href="#focusandstatechange">Focus and state change</a></li>
+      <li class="pb3"><a class="link underline" href="#forms">Forms</a></li>
+      <li class="pb3"><a class="link underline" href="#cssframework">CSS Framework</a></li>
+      <li class="pb3"><a class="link underline" href="#colors">Colors</a></li>
+      <li class="pb3"><a class="link underline" href="#typography">Typography</a></li>
+      <li class="pb3"><a class="link underline" href="#iconography">Iconography</a></li>
+      <li class="pb3"><a class="link underline" href="#customcomponents">Custom Components</a></li>
+    </ul>
+  </nav>
 
-  <p class="f4 lh-copy mw7 ph2 mb4">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
+  <div class="fl w-100 w-75-l">
+    <h1 class="f3 fw6 mb3">Design System</h1>
 
-  <section class="cf bg-white shadow br3 pa4 mb5">
-    <h1 class="f4 fw6 mb3">CSS Framework</h1>
+    <p class="lh-copy measure-wide mb5">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
 
-    <div class="flex-l mb5">
-    	<p class="lh-copy measure-wide pr5-l mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like modular/BEM. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as custom colors to offer higher contrast) and put together some custom components below.</p>
+    <h2 class="f4 fw6 mb3" id="accessibility">Accessibility</h2>
+    <p class="lh-copy measure-wide mb5">We want to make our software available to as many people as possible. To do this we should comply with the <a href="https://www.w3.org/TR/WCAG21" class="link underline">Web Content Accessibility Guidelines</a> at the AA level (at least). New features should be checked against these guidelines.</p>
 
-      <div>
-      	<p class="fw6 mb3"><a href="https://tachyons.io/docs" class="link underline">Some common Tachyons documentation:</a></p>
-      	<ul>
-      		<li class="pl3 mb3"><a href="https://tachyons.io/docs/typography/scale" class="link underline">Typography Scale</a></li>
-      		<li class="pl3 mb3"><a href="https://tachyons.io/docs/typography/font-weight" class="link underline">Font Weight</a></li>
-      		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/spacing" class="link underline">Spacing (padding / margin)</a></li>
-      		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/display" class="link underline">Display</a></li>
-      		<li class="pl3 mb3"><a href="https://tachyons.io/docs/layout/max-widths" class="link underline">Max Width</a></li>
-      	</ul>
-      </div>
-    </div>
+    <h2 class="f4 fw6 mb3" id="content">Content</h2>
+    <p class="lh-copy measure-wide mb3">Write clear and concise copy. This will especially help people with cognitive disabilities and non-native english speakers, but it’s helpful for everyone.</p>
+    <p class="lh-copy measure-wide mb3">Provide alt text for all images and charts. The alt text should communicate the same message that’s conveyed visually. If an image is purely decoration, leave the alt tag blank (don’t just leave the element off) so screen readers don’t pick them up.</p>
+    <p class="lh-copy measure-wide mb5">Ambiguous elements (like icons) should describe their purpose or action, not purely their appearance. It’s usually best to use visually hidden text for screen readers, but ideally the text doesn’t have to be hidden and icons are only used to enhance the text.</p>
 
-    <h1 class="f4 fw6 bt b--black-10 pt5 mb3">Custom Components</h1>
-    <p class="lh-copy measure-wide mb5">This is a small application, but we could consider using <a href="https://github.com/jxnblk/tachyons-components" class="link underline">Tachyons-Components</a> to abstract the styling and allow for overrides (<a href="https://varun.ca/tachyons-components" class="link underline">more info</a>). For now, we'll keep it simple and manually put the css classes in each element / component.</p>
+    <h2 class="f4 fw6 mb3" id="layout">Layout</h2>
+    <p class="lh-copy measure-wide mb3">Use clear hierarchies. The layout should clearly distinguish the different areas of content.</p>
+    <p class="lh-copy measure-wide mb3">Ensure the design is responsive and base decisions on your layout constraints as screen size changes rather than specific devices. There are too many screen sizes in use and they are always changing. This is also helpful for people who increase text size or zoom.</p>
+    <p class="lh-copy measure-wide mb5"><a href="https://www.w3.org/TR/WCAG21" class="link underline">Touch targets</a> should be 44 x 44 css pixels, with some exceptions like inline text links.</p>
 
-    <p class="mb3"><strong>Colors</strong></p>
-    <p class="lh-copy mb4 measure-wide">The main colors used are blue and gray. Blue should carry the main call to action for a view. The other colors are used mainly for search result categories and alerts. To ensure there is sufficient contrast (WCAG 2 AA standards) when combining colors, you can use this <a href="https://snook.ca/technical/colour_contrast/colour.html" class="link underline">Color Contrast Check Tool</a>. A good tool for simulating color blindness is <a href="http://colororacle.org" class="link underline">Color Oracle</a>.</p>
+    <h2 class="f4 fw6 mb3" id="sematichtml">Semantic HTML</h2>
+    <p class="lh-copy measure-wide mb3">Well-structured HTML is essential to help make a website accessible. It’s not just pedantic, semantic HTML goes a long way to help assistive technologies. For example, spans, divs, and other default non-interactive elements should not be made into interactive elements because it can cause confusion for keyboard navigation and screen readers.</p>
+    <p class="lh-copy measure-wide mb3">Here is an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="link underline">HTML elements reference</a> to help you choose the best element.</p>
+    <p class="lh-copy measure-wide mb5">Sometimes there isn’t a good HTML element to describe an element, so we can use roles. An example is using <code>role="alert"</code> on a div since there isn’t a better HTML element. Roles aren’t needed when there is a good HTML element to use. For example, <code>&lt;button&gt;</code> is better than <code>&lt;div role="button"&gt;</code>.</p>
+
+    <h2 class="f4 fw6 mb3" id="keyboardsupport">Keyboard Support</h2>
+    <p class="lh-copy measure-wide mb3">Make sure all tasks can be completed with a keyboard. This includes:</p>
+    <ul class="mb3 pl3">
+      <li class="pb3 dli">Tabbing to move focus on each interactive element.</li>
+      <li class="pb3 dli">Enter or space for activating the interactive element.</li>
+      <li class="pb3 dli">Arrow keys to move focus within tabs or other custom controls.</li>
+      <li class="pb3 dli">Esc to close menus, dialogs, and popups.</li>
+      <li class="pb3 dli">The tab order should follow the logical interaction flow.</li>
+    </ul>
+    <p class="lh-copy measure-wide mb5">Use obvious CSS focus styles. They are essential for keyboard navigation. You can reuse <code>:hover</code> state for <code>:focus</code>, and make sure it’s obvious on all elements because sometimes the default <code>:focus</code> is not obvious.</p>
+
+    <h2 class="f4 fw6 mb3" id="focusandstatechange">Focus and state change</h2>
+    <p class="lh-copy measure-wide mb5">We need to account for when views change without a page refresh. This is more common with the use of “single page” web applications such as those built in frameworks like React. If the focus is not moved to the relevant element when a view changes, this can be confusing for people using screen readers and keyboard navigation. Here is an article that addresses <a href="https://simplyaccessible.com/article/react-a11y" class="link underline">focus management and live messaging in React</a>.</p>
+
+    <h2 class="f4 fw6 mb3" id="forms">Forms</h2>
+    <p class="lh-copy measure-wide mb3">Every form field needs a <code>&lt;label&gt;</code>, even if it is hidden because it is part of a group like the optional second part of an address.</p>
+    <p class="lh-copy measure-wide mb3">Use predetermined options instead of freeform choices when possible because this helps people who have difficulty writing.</p>
+    <p class="lh-copy measure-wide mb3">Inputs need to clearly show if a specific format is required. Ideally the system can parse any input. A js helper / mask can be useful, but make sure to test with screen readers.</p>
+    <p class="lh-copy measure-wide mb5">Validate inputs as soon as focus is left, or possibly sooner if you can be sure the input will be invalid.</p>
+
+    <h2 class="f4 fw6 mb3" id="cssframework">CSS Framework</h2>
+    <p class="lh-copy measure-wide mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like modular/BEM. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as custom colors to offer higher contrast) and put together some custom components below.</p>
+    <p class="fw6 mb5"><a href="https://tachyons.io/docs" class="link underline">Tachyons documentation for composing styles</a></p>
+
+    <h2 class="f4 fw6 mb3" id="colors">Colors</h2>
+    <p class="lh-copy mb3 measure-wide">The main colors used are blue and gray. Blue should carry the main call to action for a view. The other colors are used mainly for search result categories and alerts.</p>
+    <p class="lh-copy mb3 measure-wide">Ensure there is sufficient color contrast between text and its background. You can use <a href="https://snook.ca/technical/colour_contrast/colour.html" class="link underline">this tool</a> to check your combinations.</p>
+    <p class="lh-copy measure-wide mb3">Color should not be the sole means of communication. People with color blindness may not be able to differentiate some colors. <a href="http://colororacle.org" class="link underline">Color Oracle</a> is a good tool to avoid bad combinations. This also helps people with low or no vision.</p>
+
     <div class="flex flex-wrap">
         <div class="mb3 w-50 w-20-l">
             <div class="bg-green white pa3">$green</div>
@@ -96,21 +139,21 @@
         </div>
     </div>
     <div class="flex flex-wrap">
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-washed-green pa3">$washed-green</div>
+        <div class="mb3 w-50 w-20-l bg-washed-green">
+            <div class="pa3">$washed-green</div>
         </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-washed-blue pa3">$washed-blue</div>
+        <div class="mb3 w-50 w-20-l bg-washed-blue">
+            <div class="pa3">$washed-blue</div>
         </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-washed-purple pa3">$washed-purple</div>
+        <div class="mb3 w-50 w-20-l bg-washed-purple">
+            <div class="pa3">$washed-purple</div>
         </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-washed-red pa3">$washed-red</div>
+        <div class="mb3 w-50 w-20-l bg-washed-red">
+            <div class="pa3">$washed-red</div>
         </div>
     </div>
 
-    <div class="flex flex-wrap mb6">
+    <div class="flex flex-wrap mb5">
         <div class="mb3 w-50 w-20-l">
             <div class="bg-black-60 white pa3">$black-60</div>
         </div>
@@ -121,6 +164,15 @@
             <div class="bg-gray-blue pa3">$gray-blue</div>
         </div>
     </div>
+
+    <h2 class="f4 fw6 mb3" id="typography">Typograpy</h2>
+    <p class="lh-copy mb5 measure-wide">Coming soon...</p>
+
+    <h2 class="f4 fw6 mb3" id="iconography">Iconography</h2>
+    <p class="lh-copy mb5 measure-wide">Coming soon...</p>
+
+    <h2 class="f4 fw6 bt b--black-10 pt5 mb3" id="customcomponents">Custom Components</h2>
+    <p class="lh-copy measure-wide mb5">This is a small application, but we could consider using <a href="https://github.com/jxnblk/tachyons-components" class="link underline">Tachyons-Components</a> to abstract the styling and allow for overrides (<a href="https://varun.ca/tachyons-components" class="link underline">more info</a>). For now, we'll keep it simple and manually put the css classes in each element / component.</p>
 
     <p><a href="#" class="link underline hover-blue mr5">Link style gray</a><a href="#" class="blue link underline hover-black-60">Link style blue</a></p>
     <code class="bg-near-white pa2 mt3 db">
@@ -178,8 +230,7 @@
     <code class="bg-near-white pa2 mb5 db">
       &lt;p class="lh-copy measure"&gt; &#8230;
     </code>
-
-  </section>
+  </div>
 </main>
 
 
