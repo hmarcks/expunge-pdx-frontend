@@ -3,21 +3,25 @@ layout: default
 title: Design System
 ---
 
-<main class="mw8 ph3 ph4-ns mt5 cf">
+<main class="mw8 ph3 ph4-ns mt4 center cf">
 
-  <nav class="fl w-100 w-30-l pr3-l mb5">
+  <h1 class="f2 fw6 mb3">Design System</h1>
+
+  <p class="lh-copy measure-wide mb5">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
+
+  <nav class="fr w-100 w-30-l pr3-l mb5">
     <ul>
-      <li>
+      <li class="dib db-l mr3 v-top">
         <span class="fw6">Foundations</span>
         <ul class="f6 pt2 pb3">
           <li class="pb2"><a class="link underline" href="#accessibility">Accessibility</a></li>
           <li class="pb2"><a class="link underline" href="#content">Content</a></li>
           <li class="pb2"><a class="link underline" href="#layout">Layout</a></li>
-          <li class="pb2"><a class="link underline" href="#semantichtml">Semantic HTML</a></li>
-          <li class="pb2"><a class="link underline" href="#cssframework">CSS Framework</a></li>
+          <li class="pb2"><a class="link underline" href="#semantic-html">Semantic HTML</a></li>
+          <li class="pb2"><a class="link underline" href="#css-framework">CSS Framework</a></li>
         </ul>
       </li>
-      <li>
+      <li class="dib db-l mr3 v-top">
         <span class="fw6 pb3">Style</span>
         <ul class="f6 pt2 pb3">
           <li class="pb2"><a class="link underline" href="#colors">Colors</a></li>
@@ -25,15 +29,15 @@ title: Design System
           <li class="pb2"><a class="link underline" href="#iconography">Iconography</a></li>
         </ul>
       </li>
-      <li>
+      <li class="dib db-l mr3 v-top">
         <span class="fw6 pb3">Interaction</span>
         <ul class="f6 pt2 pb3">
           <li class="pb2"><a class="link underline" href="#keyboardsupport">Keyboard Support</a></li>
-          <li class="pb2"><a class="link underline" href="#focusandstatechange">Focus and state change</a></li>
+          <li class="pb2"><a class="link underline" href="#focus-and-state-change">Focus and state change</a></li>
           <li class="pb2"><a class="link underline" href="#forms">Forms</a></li>
         </ul>
       </li>
-      <li>
+      <li class="dib db-l v-top">
         <span class="fw6 pb3">Components</span>
         <ul class="f6 pt2 pb3">
           <li class="pb2"><a class="link underline" href="#links">Links</a></li>
@@ -47,11 +51,8 @@ title: Design System
   </nav>
 
   <div class="fl w-100 w-70-l">
-    <h1 class="f3 fw6 mb3">Design System</h1>
 
-    <p class="lh-copy measure-wide mb5">This design system will include design guidelines and a living pattern library of frequently used components to help create effective and consistent interactions.</p>
-
-    <h2 class="f3 fw6 bt b--black-10 pt4 mb4">Foundations</h2>
+    <h2 class="f3 fw6 mb4">Foundations</h2>
 
     <h3 class="f4 fw6 mb3" id="accessibility">Accessibility</h3>
     <p class="lh-copy measure-wide mb5">We want to make our software available to as many people as possible. To do this we should comply with the <a href="https://www.w3.org/TR/WCAG21" class="link underline">Web Content Accessibility Guidelines</a> at the AA level (at least). New features should be checked against these guidelines.</p>
@@ -66,12 +67,12 @@ title: Design System
     <p class="lh-copy measure-wide mb3">Ensure the design is responsive and base decisions on your layout constraints as screen size changes rather than specific devices. There are too many screen sizes in use and they are always changing. This is also helpful for people who increase text size or zoom.</p>
     <p class="lh-copy measure-wide mb5"><a href="https://www.w3.org/TR/WCAG21" class="link underline">Touch targets</a> should be 44 x 44 css pixels, with some exceptions like inline text links.</p>
 
-    <h3 class="f4 fw6 mb3" id="sematichtml">Semantic HTML</h3>
+    <h3 class="f4 fw6 mb3" id="semantic-html">Semantic HTML</h3>
     <p class="lh-copy measure-wide mb3">Well-structured HTML is essential to help make a website accessible. It’s not just pedantic, semantic HTML goes a long way to help assistive technologies. For example, spans, divs, and other default non-interactive elements should not be made into interactive elements because it can cause confusion for keyboard navigation and screen readers.</p>
     <p class="lh-copy measure-wide mb3">Here is an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="link underline">HTML elements reference</a> to help you choose the best element.</p>
     <p class="lh-copy measure-wide mb5">Sometimes there isn’t a good HTML element to describe an element, so we can use roles. An example is using <code>role="alert"</code> on a div since there isn’t a better HTML element. Roles aren’t needed when there is a good HTML element to use. For example, <code>&lt;button&gt;</code> is better than <code>&lt;div role="button"&gt;</code>.</p>
 
-    <h3 class="f4 fw6 mb3" id="cssframework">CSS Framework</h3>
+    <h3 class="f4 fw6 mb3" id="css-framework">CSS Framework</h3>
     <p class="lh-copy measure-wide mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like modular/BEM. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as custom colors to offer higher contrast) and put together some custom components below.</p>
     <p class="fw6 mb5"><a href="https://tachyons.io/docs" class="link underline">Tachyons documentation for composing styles</a></p>
 
@@ -82,48 +83,49 @@ title: Design System
     <p class="lh-copy mb3 measure-wide">Ensure there is sufficient color contrast between text and its background. You can use <a href="https://snook.ca/technical/colour_contrast/colour.html" class="link underline">this tool</a> to check your combinations.</p>
     <p class="lh-copy measure-wide mb3">Color should not be the sole means of communication. People with color blindness may not be able to differentiate some colors. <a href="http://colororacle.org" class="link underline">Color Oracle</a> is a good tool to avoid bad combinations. This also helps people with low or no vision.</p>
 
-    <div class="flex flex-wrap">
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-green white pa3">$green</div>
-        </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-blue white pa3">$blue</div>
-        </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-dark-blue white pa3">$dark-blue</div>
-        </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-purple white pa3">$purple</div>
-        </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-red white pa3">$red</div>
-        </div>
-    </div>
-    <div class="flex flex-wrap">
-        <div class="mb3 w-50 w-20-l bg-washed-green">
-            <div class="pa3">$washed-green</div>
-        </div>
-        <div class="mb3 w-50 w-20-l bg-washed-blue">
-            <div class="pa3">$washed-blue</div>
-        </div>
-        <div class="mb3 w-50 w-20-l bg-washed-purple">
-            <div class="pa3">$washed-purple</div>
-        </div>
-        <div class="mb3 w-50 w-20-l bg-washed-red">
-            <div class="pa3">$washed-red</div>
-        </div>
-    </div>
-
-    <div class="flex flex-wrap mb5">
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-black-60 white pa3">$black-60</div>
-        </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-black-10 pa3">$black-10</div>
-        </div>
-        <div class="mb3 w-50 w-20-l">
-            <div class="bg-gray-blue pa3">$gray-blue</div>
-        </div>
+    <div class="bg-white pt3 ph3 mb5">
+      <div class="flex flex-wrap">
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-green white pa3">$green</div>
+          </div>
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-blue white pa3">$blue</div>
+          </div>
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-dark-blue white pa3">$dark-blue</div>
+          </div>
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-purple white pa3">$purple</div>
+          </div>
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-red white pa3">$red</div>
+          </div>
+      </div>
+      <div class="flex flex-wrap">
+          <div class="mb3 w-50 w-20-l bg-washed-green">
+              <div class="pa3">$washed-green</div>
+          </div>
+          <div class="mb3 w-50 w-20-l bg-washed-blue">
+              <div class="pa3">$washed-blue</div>
+          </div>
+          <div class="mb3 w-50 w-20-l bg-washed-purple">
+              <div class="pa3">$washed-purple</div>
+          </div>
+          <div class="mb3 w-50 w-20-l bg-washed-red">
+              <div class="pa3">$washed-red</div>
+          </div>
+      </div>
+      <div class="flex flex-wrap">
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-black-60 white pa3">$black-60</div>
+          </div>
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-black-10 pa3">$black-10</div>
+          </div>
+          <div class="mb3 w-50 w-20-l">
+              <div class="bg-gray-blue pa3">$gray-blue</div>
+          </div>
+      </div>
     </div>
 
     <h3 class="f4 fw6 mb3" id="typography">Typograpy</h3>
@@ -145,7 +147,7 @@ title: Design System
     </ul>
     <p class="lh-copy measure-wide mb5">Use obvious CSS focus styles. They are essential for keyboard navigation. You can reuse <code>:hover</code> state for <code>:focus</code>, and make sure it’s obvious on all elements because sometimes the default <code>:focus</code> is not obvious.</p>
 
-    <h3 class="f4 fw6 mb3" id="focusandstatechange">Focus and state change</h3>
+    <h3 class="f4 fw6 mb3" id="focus-and-state-change">Focus and state change</h3>
     <p class="lh-copy measure-wide mb5">We need to account for when views change without a page refresh. This is more common with the use of “single page” web applications such as those built in frameworks like React. If the focus is not moved to the relevant element when a view changes, this can be confusing for people using screen readers and keyboard navigation. Here is an article that addresses <a href="https://simplyaccessible.com/article/react-a11y" class="link underline">focus management and live messaging in React</a>.</p>
 
     <h3 class="f4 fw6 mb3" id="forms">Forms</h3>
@@ -155,7 +157,7 @@ title: Design System
     <p class="lh-copy measure-wide mb5">Validate inputs as soon as focus is left, or possibly sooner if you can be sure the input will be invalid.</p>
 
     <h2 class="f3 fw6 bt b--black-10 pt4 mb4">Components</h2>
-    
+
     <p class="lh-copy measure-wide mb5">This is a small application, but we could consider using <a href="https://github.com/jxnblk/tachyons-components" class="link underline">Tachyons-Components</a> to abstract the styling and allow for overrides (<a href="https://varun.ca/tachyons-components" class="link underline">more info</a>). For now, we'll keep it simple and manually put the css classes in each element / component.</p>
 
     <h3 class="f4 fw6 mb3" id="links">Links</h3>
