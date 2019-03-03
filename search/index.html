@@ -35,18 +35,18 @@ title: Search Records
     </form>
   </section>
 
-  <section class="mv4">
+  <div role="alert" class="mv4">
     <!-- Show if missing a field on submit -->
-    <div class="bg-washed-red mv4 pa3 br3 fw6">All search fields are required.</div>
+    <p class="bg-washed-red mv4 pa3 br3 fw6">All search fields are required.</p>
     <!-- Show if the date format is incorrect. We should also allow for "-" along with "/" and not worry about leading zeros. -->
-    <div class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</div>
+    <p class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</p>
     <!-- Show if any of the services are down. If there's no internet connection we would ideally have a different message, but that's a nice-to-have. -->
-    <div class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</div>
+    <p class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</p>
     <!-- Show this loading indicator while generating results. -->
-    <div class="bg-white mv4 pa4 br3 fw6"><span class="spinner mr2"></span>Loading your search results...</div>
+    <p class="bg-white mv4 pa4 br3 fw6"><span class="spinner mr2"></span>Loading your search results...</p>
     <!-- Show if we can't find results. -->
-    <div class="bg-light-gray mv4 pa4 br3 fw6">No search results found :(</div>
-  </section>
+    <p class="bg-light-gray mv4 pa4 br3 fw6">No search results found.</p>
+  </div>
 
   <section class="bg-white shadow br3 br--top">
     <div class="pa3">

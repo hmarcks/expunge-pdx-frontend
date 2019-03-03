@@ -60,7 +60,7 @@ footer { box-shadow: 0 50vh 0 50vh #ffffff; }
 
 .pointer-events-none { pointer-events: none; }
 
-.dli { display: list-item; }
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); }
 
 /* Fix Version 0.1.1 https://github.com/jaydenseric/Fix
 */
@@ -101,3 +101,12 @@ a { text-decoration: none; color: inherit; }
 button { border: 0; margin: 0; padding: 0; text-align: inherit; text-transform: inherit; font: inherit; -webkit-font-smoothing: inherit; letter-spacing: inherit; background: none; cursor: pointer; overflow: visible; }
 
 ::-moz-focus-inner { border: 0; padding: 0; }
+
+pre { margin: 0; }
+
+/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset */
+legend { padding: 0; display: table; }
+
+fieldset { border: 0; padding: 0.01em 0 0 0; margin: 0; min-width: 0; }
+
+body:not(:-moz-handler-blocked) fieldset { display: table-cell; }

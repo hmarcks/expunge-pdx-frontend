@@ -6,18 +6,26 @@ title: Log in to Record Expunge
 <main class="mw8 center ph2">
   <section class="mw6 center cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
     {% include svg/logo.svg %}
-    <label for="input1" class="db mt4 mb1 fw6">
-      Email
-    </label>
-    <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
-    <label for="input1" class="db mb1 fw6">
-      Password
-    </label>
-    <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
-    <a class="{% include button.html %}" href="/">Log In</a>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">All fields are required.</div>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">User ID and password do not match.</div>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
+    <form>
+      <fieldset>
+        <legend class="visually-hidden">Log in</legend>
+        <label for="input1" class="db mt4 mb1 fw6">
+          Email
+        </label>
+        <input id="input1" type="email" class="w-100 mb4 pa3 br2 b--black-10">
+        <label for="input1" class="db mb1 fw6">
+          Password
+        </label>
+        <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
+        <a class="{% include button.html %}" href="/">Log In</a>
+        <!-- Change to <button> when in app -->
+      </fieldset>
+      <div role="alert">
+        <p class="bg-washed-red mb3 pa3 br3 fw6">All fields are required.</p>
+        <p class="bg-washed-red mb3 pa3 br3 fw6">User ID and password do not match.</p>
+        <p class="bg-washed-red mb3 pa3 br3 fw6">Technical difficulties, please try again later.</p>
+      </div>
+    </form>
     <div class="tc">
       <a class="link underline" href="#">Forgot your password?</a>
     </div>
@@ -25,15 +33,24 @@ title: Log in to Record Expunge
 
   <section class="mw6 center cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
     {% include svg/logo.svg %}
-    <h1 class="f4 fw7 mt4">Forgot your password?</h1>
-    <label for="input1" class="db mt4 mb1 fw6">
-      Email
-    </label>
-    <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
-    <a class="{% include button.html %}" href="#">Send email to reset password</a>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">Please enter your email.</div>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
-    <div class="bg-washed-green mb4 pa3 br3 fw6">Thanks, we're sending an email that will help you reset your password.</div>
+    <form>
+      <fieldset>
+        <legend class="f4 fw7 pt4">Forgot your password?</legend>
+        <label for="email" class="db mt4 mb1 fw6">
+          Email
+        </label>
+        <input id="email" type="email" class="w-100 mb4 pa3 br2 b--black-10">
+        <a class="{% include button.html %}" href="#">Send email to reset password</a>
+        <!-- Change to <button> when in app -->
+      </fieldset>
+      <div role="alert">
+        <p class="bg-washed-red mb3 pa3 br3 fw6">Please enter your email.</p>
+        <p class="bg-washed-red mb3 pa3 br3 fw6">Technical difficulties, please try again later.</p>
+      </div>
+      <div role="status">
+        <p class="bg-washed-green mb3 pa3 br3 fw6">Thanks, we're sending an email that will help you reset your password.</p>
+      </div>
+    </form>
     <div class="tc">
       <a class="link underline" href="#">Return to log in</a>
     </div>
@@ -41,13 +58,20 @@ title: Log in to Record Expunge
 
   <section class="mw6 center cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
     {% include svg/logo.svg %}
-    <h1 class="f4 fw7 mt4">Set your password</h1>
-    <label for="input1" class="db mt4 mb1 fw6">
-      Password
-    </label>
-    <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-10">
-    <a class="{% include button.html %}" href="#">Set password and log in</a>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">Your password must have at least [n] characters.</div>
-    <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
+    <form>
+      <fieldset>
+        <legend class="visually-hidden">Set password</legend>
+        <label for="password" class="db mt4 mb1 fw6">
+          Password
+        </label>
+        <input id="password" type="text" class="w-100 mb4 pa3 br2 b--black-10">
+        <a class="{% include button.html %}" href="#">Set password and log in</a>
+        <!-- Change to <button> when in app -->
+      </fieldset>
+      <div role="alert" class="mb4">
+        <p class="bg-washed-red mb3 pa3 br3 fw6">Your password must have at least [n] characters.</p>
+        <p class="bg-washed-red mb3 pa3 br3 fw6">Technical difficulties, please try again later.</p>
+      </div>
+    </form>
   </section>
 </main>
