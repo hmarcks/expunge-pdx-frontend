@@ -11,23 +11,23 @@ title: Add user, edit user, your account
         <label for="name" class="db mb2 fw6">
           Name *
         </label>
-        <input id="name" type="text" class="w-100 pa3 br2 b--black-10" />
+        <input id="name" required type="text" class="w-100 pa3 br2 b--black-20" />
       </div>
 
       <div class="mb4">
         <label for="email" class="db mb2 fw6">
           Email *
         </label>
-        <input id="email" type="email" class="w-100 pa3 br2 b--black-10" />
+        <input id="email" required type="email" class="w-100 pa3 br2 b--black-20" />
       </div>
 
       <div class="mb4">
         <label for="role" class="db mb2 fw6">
           Role
         </label>
-        <ul class="list pl0 ml0 center mw6 ba bw1 b--black-10 br2">
-          <li class="ph3 pv3 bb bw1 b--black-10">
-            <div class="pb2">
+        <div class="pl0 ml0 center ba bw1 b--black-20 br2">
+          <div class="ph3 bb bw1 b--black-20">
+            <div class="radio">
               <input
                 type="radio"
                 id="search"
@@ -36,16 +36,14 @@ title: Add user, edit user, your account
                 class="v-top"
                 checked
               />
-              <label for="search" class="pl1 fw6">Search</label>
+              <label for="search" class="fw6">Search</label>
             </div>
-            <div>
-              <ul class="pl3">
-                <li class="mb1">&bull;&nbsp;Can search records</li>
-              </ul>
+            <div class="radio">
+              <p class="mt3 ml4 mb4">&bull;&nbsp;Can search records</p>
             </div>
-          </li>
-          <li class="ph3 pv3">
-            <div class="pb2">
+          </div>
+          <div class="ph3">
+            <div class="radio">
               <input
                 type="radio"
                 id="admin"
@@ -53,16 +51,14 @@ title: Add user, edit user, your account
                 value="admin"
                 class="v-top"
               />
-              <label for="admin" class="pl1 fw6">Admin</label>
+              <label for="admin" class="fw6">Admin</label>
             </div>
-            <div>
-              <ul class="pl3">
-                <li class="mb1">&bull;&nbsp;Can search records</li>
-                <li class="mb1">&bull;&nbsp;Can manage users and groups</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+            <ul class="mt3 ml4 mb4">
+              <li class="mb1">&bull;&nbsp;Can search records</li>
+              <li class="mb1">&bull;&nbsp;Can manage users and groups</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="mb4">
@@ -72,7 +68,7 @@ title: Add user, edit user, your account
         <div class="relative">
           <select
             id="group"
-            class="w-100 pa3 br2 bw1 b--black-10 input-reset bg-white black-60"
+            class="w-100 pa3 br2 bw1 b--black-20 input-reset bg-white black-60"
           >
             <option value="">
               Please select a group

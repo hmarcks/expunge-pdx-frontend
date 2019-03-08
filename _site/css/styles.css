@@ -58,6 +58,22 @@
   100% { -webkit-transform: scale(1); transform: scale(1); opacity: 0; } }
 footer { box-shadow: 0 50vh 0 50vh #ffffff; }
 
+.radio input[type='radio'] { opacity: 0; }
+
+.radio label { position: relative; display: block; padding: 0.3em 3rem 0 2.2rem; }
+
+.radio label::before, .radio label::after { position: absolute; content: ''; display: inline-block; }
+
+.radio label::before { height: 28px; width: 28px; left: 0; top: 1px; background: white; border-radius: 50%; border: 2px solid rgba(0, 0, 0, 0.2); }
+
+.radio label::after { left: 5px; top: 6px; width: 18px; height: 18px; background: #2b74d2; border-radius: 50%; }
+
+.radio input[type='radio'] + label::after { content: none; }
+
+.radio input[type='radio']:checked + label::after { content: ''; }
+
+.radio input[type='radio']:focus + label::before { outline: auto 2px Highlight; outline: auto 5px -webkit-focus-ring-color; }
+
 .pointer-events-none { pointer-events: none; }
 
 .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); }
@@ -102,7 +118,7 @@ button { border: 0; margin: 0; padding: 0; text-align: inherit; text-transform: 
 
 ::-moz-focus-inner { border: 0; padding: 0; }
 
-pre { margin: 0; }
+pre { margin: 0; overflow: auto; }
 
 /* https://thatemil.com/blog/2015/01/03/reset-your-fieldset */
 legend { padding: 0; display: table; }

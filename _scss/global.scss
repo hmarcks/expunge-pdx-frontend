@@ -161,6 +161,50 @@ footer {
   box-shadow: 0 50vh 0 50vh #ffffff;
 }
 
+// Radio button from https://a11y-style-guide.com
+
+.radio input[type='radio'] {
+  opacity: 0;
+}
+.radio label {
+  position: relative;
+  display: block;
+  padding: 0.3em 3rem 0 2.2rem;
+}
+.radio label::before,
+.radio label::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+}
+.radio label::before {
+  height: 28px;
+  width: 28px;
+  left: 0;
+  top: 1px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,.2);
+}
+.radio label::after {
+  left: 5px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  background: $blue;
+  border-radius: 50%;
+}
+.radio input[type='radio'] + label::after {
+  content: none;
+}
+.radio input[type='radio']:checked + label::after {
+  content: '';
+}
+.radio input[type='radio']:focus + label::before {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
 // Change the breakpoint "ns" variable to be wider?
 
 // Custom utility classes
