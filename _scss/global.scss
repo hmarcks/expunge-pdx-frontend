@@ -161,7 +161,66 @@ footer {
   box-shadow: 0 50vh 0 50vh #ffffff;
 }
 
-// Radio button from https://a11y-style-guide.com
+// Radio buttons and checkbox from https://a11y-style-guide.com
+// Checkbox
+
+.checkbox input[type='checkbox'] {
+  opacity: 0;
+}
+
+.checkbox label {
+  position: relative;
+  display: block;
+  padding: 0.3rem 3rem 0 2.2rem;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+}
+
+.checkbox label::before {
+  height: 26px;
+  width: 26px;
+  left: 0;
+  top: 1px;
+  background: white;
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 4px;
+}
+
+.checkbox label::after {
+  left: 9px;
+  top: 5px;
+  width: 8px;
+  height: 14px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox input[type='checkbox'] + label::after {
+  content: none;
+}
+
+.checkbox input[type='checkbox']:checked + label::after {
+  content: '';
+}
+
+.checkbox input[type='checkbox']:checked + label::before {
+  background: $blue;
+}
+
+.checkbox input[type='checkbox']:focus + label::before {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
+// Radio
 
 .radio input[type='radio'] {
   opacity: 0;
@@ -169,7 +228,7 @@ footer {
 .radio label {
   position: relative;
   display: block;
-  padding: 0.3em 3rem 0 2.2rem;
+  padding: 0.4rem 3rem 0 2.2rem;
 }
 .radio label::before,
 .radio label::after {

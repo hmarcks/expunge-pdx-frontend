@@ -89,7 +89,10 @@
           <li class="pb2"><a class="link underline" href="#links">Links</a></li>
           <li class="pb2"><a class="link underline" href="#buttons">Buttons</a></li>
           <li class="pb2"><a class="link underline" href="#input">Input</a></li>
+          <li class="pb2"><a class="link underline" href="#textarea">Textarea</a></li>
+          <li class="pb2"><a class="link underline" href="#checkbox">Checkbox</a></li>
           <li class="pb2"><a class="link underline" href="#radio-buttons">Radio Buttons</a></li>
+          <li class="pb2"><a class="link underline" href="#select">Select</a></li>
           <li class="pb2"><a class="link underline" href="#status-message">Status Messages</a></li>
           <li class="pb2"><a class="link underline" href="#panel">Panel</a></li>
         </ul>
@@ -231,12 +234,41 @@
     </code>
 
     <h3 class="f3 fw6 mb3" id="input">Input</h3>
-    <label for="n" class="db mb1 fw6">
-      Input Label
-    </label>
-    <input id="n" type="text" class="pa3 br2 b--black-20">
+    <p class="lh-copy measure-wide mb4">There should almost always be a label visible for a field. Using only placeholders can cause confusion about what the field is for when there is data entered or a validation is triggered.</p>
+    <label for="name" class="db mb1 fw6">Name</label>
+    <input id="name" type="text" name="name" class="pa3 br2 b--black-20">
     <pre class="bg-near-white pa3 mt3 mb6"><code>&lt;label for="n" class="db mb1 fw6"&gt; &#8230;
   &lt;input id="n" type="text" class="pa3 br2 b--black-20"&gt; &#8230;</code></pre>
+
+    <h3 class="f3 fw6 mb3" id="textarea">Textarea</h3>
+    <label for="ducks" class="db mb1 fw6">What do you like about ducks?</label>
+    <textarea id="ducks" name="ducks" rows="4" class="pa3 br2 bw1 b--black-20 w-100"></textarea>
+    <pre class="bg-near-white pa3 mt3 mb6"><code>&lt;label for=&quot;ducks&quot; class=&quot;db mb1 fw6&quot;&gt;What do you like about ducks?&lt;/label&gt;
+&lt;textarea id=&quot;ducks&quot; name=&quot;ducks&quot; class=&quot;pa3 br2 bw1 b--black-20&quot;&gt;&lt;/textarea&gt;</code></pre>
+
+    <h3 class="f3 fw6 mb3" id="checkbox">Checkbox</h3>
+    <fieldset class="mb4">
+      <legend class="fw6">What do you like?</legend>
+      <div class="checkbox">
+        <input id="chocolate" type="checkbox" name="likes" value="chocolate"/>
+        <label for="chocolate">Chocolate</label>
+        <input id="cherimoya" type="checkbox" name="likes" value="cherimoya"/>
+        <label for="cherimoya">Cherimoya</label>
+        <input id="cauliflower" type="checkbox" name="likes" value="cauliflower"/>
+        <label for="cauliflower">Cauliflower</label>
+      </div>
+    </fieldset>
+    <pre class="bg-near-white pa3 mb6"><code>&lt;fieldset class=&quot;mb4&quot;&gt;
+  &lt;legend class=&quot;fw6&quot;&gt;What do you like?&lt;/legend&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input id=&quot;chocolate&quot; type=&quot;checkbox&quot; name=&quot;likes&quot; value=&quot;chocolate&quot;/&gt;
+    &lt;label for=&quot;chocolate&quot;&gt;Chocolate&lt;/label&gt;
+    &lt;input id=&quot;cherimoya&quot; type=&quot;checkbox&quot; name=&quot;likes&quot; value=&quot;cherimoya&quot;/&gt;
+    &lt;label for=&quot;cherimoya&quot;&gt;Cherimoya&lt;/label&gt;
+    &lt;input id=&quot;cauliflower&quot; type=&quot;checkbox&quot; name=&quot;likes&quot; value=&quot;cauliflower&quot;/&gt;
+    &lt;label for=&quot;cauliflower&quot;&gt;Cauliflower&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
 
     <h3 class="f3 fw6 mb3" id="radio-buttons">Radio Buttons</h3>
     <fieldset class="mb4">
@@ -244,12 +276,8 @@
       <div class="radio">
         <input type="radio" name="radio-type" id="am" value="am"/>
         <label for="am">AM broadcasting</label>
-      </div>
-      <div class="radio">
         <input type="radio" name="radio-type" id="fm" value="fm"/>
         <label for="fm">FM broadcasting</label>
-      </div>
-      <div class="radio">
         <input type="radio" name="radio-type" id="ham" value="ham"/>
         <label for="ham">Ham radio</label>
       </div>
@@ -259,17 +287,41 @@
   &lt;div class="radio"&gt;
     &lt;input type="radio" name="radio-type" id="am" value="am"/&gt;
     &lt;label for="am">AM broadcasting&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="radio"&gt;
     &lt;input type="radio" name="radio-type" id="fm" value="fm"/&gt;
     &lt;label for="fm">FM broadcasting&lt;/label&gt;
-  &lt;/div>
-  &lt;div class="radio"&gt;
     &lt;input type="radio" name="radio-type" id="ham" value="ham"/&gt;
     &lt;label for="ham">Ham radio&lt;/label&gt;
   &lt;/div&gt;
 &lt;/fieldset&gt;</code></pre>
-    
+
+
+    <h3 class="f3 fw6 mb3" id="select">Select</h3>
+    <p class="lh-copy measure-wide mb4">Generally, use a selectbox when there are more than four options, but fewer than twenty. A typeahead is usually a better choice when there are more than twenty options. Use radio buttons when there are 4 or fewer options. If there is a common default option, a selectbox may be ideal even when there are few options.</p>
+    <label for="group" class="db mb2 fw6">Select Label</label>
+    <div class="relative">
+      <select id="group" class="w-100 pa3 br2 bw1 b--black-20 input-reset bg-white black-60">
+        <option value=""></option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <div class="absolute pa3 right-0 top-0 bottom-0 pointer-events-none">
+        <i aria-hidden="true" class="fas fa-angle-down"></i>
+      </div>
+    </div>
+    <pre class="bg-near-white pa3 mt3 mb6 db"><code>&lt;label for=&quot;group&quot; class=&quot;db mb2 fw6&quot;&gt;Select Label&lt;/label&gt;
+&lt;div class=&quot;relative&quot;&gt;
+  &lt;select id=&quot;group&quot; class=&quot;w-100 pa3 br2 bw1 b--black-20 input-reset bg-white black-60&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+    &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;div class=&quot;absolute pa3 right-0 top-0 bottom-0 pointer-events-none&quot;&gt;
+    &lt;i aria-hidden=&quot;true&quot; class=&quot;fas fa-angle-down&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
     <h3 class="f3 fw6 mb3" id="status-message">Status Message</h3>
     <p class="mb4"><a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" class="link underline">Accessible status message guidance from the WCAG</a></p>
   	<div class="bg-washed-green fw6 br3 pa3 mb3">
@@ -287,7 +339,7 @@
     <section class="bg-white shadow br3 pa3 pa4-ns cf">
       <p class="mb3"><strong>Panel</strong></p>
       <p class="lh-copy measure mb3">The padding in the panel may vary, but give content room to breate on larger screens, and you will likely need to need to decrease it on smaller screens.</p>
-      <p class="lh-copy measure">Use the <a href="http://tachyons.io/docs/typography/line-height" class="link underline">Line Height</a> classes to control the line-height of your headlines and body copy. Use the <a href="https://tachyons.io/docs/typography/measure" class="link underline">measure</a> classes to keep the line-length of text between 45–75 characters.</p>
+      <p class="lh-copy measure">Use the <a href="http://tachyons.io/docs/typography/line-height" class="link underline">line height</a> classes to control the line-height of your headlines and body copy. Use the <a href="https://tachyons.io/docs/typography/measure" class="link underline">measure</a> classes to keep the line-length of text between 45–75 characters.</p>
     </section>
     <pre class="bg-near-white pa3 mt3"><code>&lt;section class="bg-white shadow br3 pa3 pa4-ns cf"&gt; &#8230;
   &lt;p class="lh-copy measure"&gt; &#8230;</pre></code>
