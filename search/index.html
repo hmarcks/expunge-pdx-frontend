@@ -1,8 +1,8 @@
 ---
 layout: site
-title: Search Records
+title: Search Records - Record Expunge Helper Oregon
 ---
-
+<!-- If search requires page refresh, update page title to "Record search results - Record Expunge Helper Oregon" when results returned -->
 <main class="mw8 center ph2">
   <section class="cf mt4 mb3 pa3 pa4-l bg-white shadow br3">
     <h1 class="mb4 f4 fw6">Record Search</h1>
@@ -27,7 +27,7 @@ title: Search Records
           <input id="date-of-birth" type="text" class="w-100 pa3 br2 b--black-20" required>
         </div>
         <div class="w-100 w-10-ns mb3">
-          <button class="br2 bg-blue white db w-100 tc pv3 btn--search" aria-label="Search" type="submit">
+          <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search"  type="submit">
             <span class="visually-hidden">Search Records</span>
             <i aria-hidden="true" class="fas fa-search"></i>
           </button>
@@ -36,13 +36,16 @@ title: Search Records
     </form>
   </section>
 
-  <div role="alert" class="mv4">
+  <div role="alert">
     <!-- Show if missing a field on submit -->
     <p class="bg-washed-red mv4 pa3 br3 fw6">All search fields are required.</p>
     <!-- Show if the date format is incorrect. We should also allow for "-" along with "/" and not worry about leading zeros. -->
     <p class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</p>
     <!-- Show if any of the services are down. If there's no internet connection we would ideally have a different message, but that's a nice-to-have. -->
     <p class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</p>
+  </div>
+
+  <div role="status">
     <!-- Show this loading indicator while generating results. -->
     <p class="bg-white mv4 pa4 br3 fw6"><span class="spinner mr2"></span>Loading your search results...</p>
     <!-- Show if we can't find results. -->
@@ -51,23 +54,23 @@ title: Search Records
 
   <section class="bg-white shadow br3 br--top">
     <div class="pa3">
-      <h1 class="gray pv2">Results for {firstname lastname}</h1>
+      <h2 class="gray pv2">Results for {firstname lastname}</h2>
     </div>
 
     <div class="flex-l bt bw2 b--near-white record--eligible">
       <div class="w-100 w-30-l pt4 pr3 pl4">
-        <div class="mb4">
+        <div class="mb3">
           <!-- IF eligible now -->
-          <span class="fw6 green bg-washed-green br-pill pv2 ph3">Eligible now</span>
+          <h2 class="dib fw6 green bg-washed-green br-pill pv2 ph3">Eligible now</h2>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF type eligible -->
-          <i class="absolute fas fa-check-circle green"></i>
+          <i aria-hidden="true" class="absolute fas fa-check-circle green"></i>
           <div class="ml3 pl1"><span class="fw7">Time:</span> Eligible now</div>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF type eligible -->
-          <i class="absolute fas fa-check-circle green"></i>
+          <i aria-hidden="true" class="absolute fas fa-check-circle green"></i>
           <div class="ml3 pl1"><span class="fw7">Type:</span> Eligible {section}</div>
         </div>
       </div>
@@ -95,18 +98,18 @@ title: Search Records
 
     <div class="flex-l bt bw2 b--near-white record--future">
       <div class="w-100 w-30-l pt4 pr3 pl4">
-        <div class="mb4">
+        <div class="mb3">
           <!-- IF eligible in future -->
-          <span class="fw6 dark-blue bg-washed-blue br-pill pv2 ph3">Eligible {mm/dd/yyyy}</span>
+          <h2 class="dib fw6 dark-blue bg-washed-blue br-pill pv2 ph3">Eligible {mm/dd/yyyy}</h2>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF time eligible in future -->
-          <i class="absolute fas fa-clock dark-blue"></i>
+          <i aria-hidden="true" class="absolute fas fa-clock dark-blue"></i>
           <div class="ml3 pl1"><span class="fw7">Time:</span> 10 years from most recent conviction</div>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF type eligible -->
-          <i class="absolute fas fa-check-circle green"></i>
+          <i aria-hidden="true" class="absolute fas fa-check-circle green"></i>
           <div class="ml3 pl1"><span class="fw7">Type:</span> Eligible {section}</div>
         </div>
       </div>
@@ -133,18 +136,18 @@ title: Search Records
 
     <div class="flex-l bt bw2 b--near-white record--review">
       <div class="w-100 w-30-l pt4 pr3 pl4">
-        <div class="mb4">
+        <div class="mb3">
           <!-- IF eligible in future, but needs review -->
-          <span class="fw6 purple bg-washed-purple br-pill pv2 ph3 nowrap">Eligible {mm/dd/yyyy} (review)</span>
+          <h2 class="dib fw6 purple bg-washed-purple br-pill pv2 ph3 nowrap">Eligible {mm/dd/yyyy} (review)</h2>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF time eligible in future -->
-          <i class="absolute fas fa-clock dark-blue"></i>
+          <i aria-hidden="true" class="absolute fas fa-clock dark-blue"></i>
           <div class="ml3 pl1"><span class="fw7">Time:</span> {time rule}</div>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF type eligible -->
-          <i class="absolute fas fa-question-circle purple"></i>
+          <i aria-hidden="true" class="absolute fas fa-question-circle purple"></i>
           <div class="ml3 pl1"><span class="fw7">Type:</span> {review reason}</div>
         </div>
       </div>
@@ -172,18 +175,18 @@ title: Search Records
     <!-- IF ineligible -->
     <div class="flex-l bt bw2 b--near-white record--ineligible">
       <div class="w-100 w-30-l pt4 pr3 pl4">
-        <div class="mb4">
+        <div class="mb3">
           <!-- IF ineligible -->
-          <span class="fw6 red bg-washed-red br-pill pv2 ph3">Ineligible</span>
+          <h2 class="dib fw6 red bg-washed-red br-pill pv2 ph3">Ineligible</h2>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF time eligible in future -->
-          <i class="absolute fas fa-clock dark-blue"></i>
+          <i aria-hidden="true" class="absolute fas fa-clock dark-blue"></i>
           <div class="ml3 pl1"><span class="fw7">Time:</span> {time rule}</div>
         </div>
         <div class="relative mb3 ml3">
           <!-- IF type ineligible -->
-          <i class="absolute fas fa-times-circle red"></i>
+          <i aria-hidden="true" class="absolute fas fa-times-circle red"></i>
           <div class="ml3 pl1"><span class="fw7">Type:</span> {review reason}</div>
         </div>
       </div>
@@ -210,10 +213,8 @@ title: Search Records
   </section>
 
   <section class="mt5 mb5 mw6 lh-copy">
-    <h1 class="fw6 mb3">Other requirements:</h1>
-    <ul>
-      <li class="mb3">For convictions, you must have completed all of the requirements imposed upon you by the court and completed your term of probation.</li>
-      <li class="mb3">Outstanding balances will be manually reviewed.</li>
-    </ul>
+    <h3 class="fw6 mb3">Other requirements:</h3>
+    <p class="mb3">For convictions, you must have completed all of the requirements imposed upon you by the court and completed your term of probation.</p>
+    <p class="mb3">Outstanding balances will be manually reviewed.</p>
   </section>
 </main>
