@@ -93,19 +93,35 @@
           <label for="first-name" class="db mb1 fw6">
             First Name
           </label>
-          <input id="first-name" type="text" class="w-100 pa3 br2 b--black-20" required>
+          <input 
+            id="first-name" 
+            type="text" 
+            class="w-100 pa3 br2 b--black-20" 
+            required
+            aria-invalid="false">
         </div>
         <div class="w-100 w-30-ns mb3 pr2-ns">
           <label for="last-name" class="db mb1 fw6">
             Last Name
           </label>
-          <input id="last-name" type="text" class="w-100 pa3 br2 b--black-20" required>
+          <input 
+            id="last-name" 
+            type="text" 
+            class="w-100 pa3 br2 b--black-20" 
+            required
+            aria-invalid="false">
         </div>
         <div class="w-100 w-30-ns mb3 pr2-ns">
           <label for="date-of-birth" class="db mb1 fw6">
             Date of Birth <span class="fw2 f6">MM/DD/YYYY</span>
           </label>
-          <input id="date-of-birth" type="text" class="w-100 pa3 br2 b--black-20" required>
+          <input 
+            id="date-of-birth" 
+            type="text" 
+            class="w-100 pa3 br2 b--black-20" 
+            required
+            aria-describedby="dob_msg"
+            aria-invalid="false">
         </div>
         <div class="w-100 w-10-ns mb3">
           <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search"  type="submit">
@@ -114,17 +130,16 @@
           </button>
         </div>
       </div>
+      <div role="alert">
+        <!-- Show if the date format is incorrect. We should also allow for "-" along with "/" and not worry about leading zeros. -->
+        <p id="dob_msg" class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</p>
+        <!-- Show if missing a field on submit -->
+        <p class="bg-washed-red mv4 pa3 br3 fw6">All search fields are required.</p>
+        <!-- Show if any of the services are down. If there's no internet connection we would ideally have a different message, but that's a nice-to-have. -->
+        <p class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</p>
+      </div>
     </form>
   </section>
-
-  <div role="alert">
-    <!-- Show if missing a field on submit -->
-    <p class="bg-washed-red mv4 pa3 br3 fw6">All search fields are required.</p>
-    <!-- Show if the date format is incorrect. We should also allow for "-" along with "/" and not worry about leading zeros. -->
-    <p class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</p>
-    <!-- Show if any of the services are down. If there's no internet connection we would ideally have a different message, but that's a nice-to-have. -->
-    <p class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</p>
-  </div>
 
   <div role="status">
     <!-- Show this loading indicator while generating results. -->
