@@ -7,36 +7,54 @@ title: Admin
 	<section class="cf bg-white shadow br3 mt5 mb3">
 		<div class="pv4 ph3">
 			<h1 class="f3 fw6 dib">Groups</h1>
-			<button class="bg-dark-blue white bg-animate hover-bg-blue fw6 br2 pv2 ph3 fr">New Group</button>
+			<button 
+        aria-expanded="true"
+        aria-controls="new_group"
+        class="bg-navy white bg-animate hover-bg-dark-blue fw6 br2 pv2 ph3 fr">
+        New Group
+      </button>
+      <form id="new_group" class="pt4">
+        <legend class="visually-hidden">Create new group</legend>
+        <label for="new-group-name" class="db mb1 fw6">New Group Name</label>
+        <div class="flex items-center">
+          <input id="new-group-name" class="pa2 br2 b--black-20"></input>
+          <button class="bg-blue white bg-animate hover-bg-dark-blue fw6 br2 pv2 ph3 ml2">Save</button>
+          <button class="bg-navy white bg-animate hover-bg-dark-blue fw6 br2 pv2 ph3 ml2">Cancel</button>
+        </div>
+      </form>
 		</div>
-
-  	<div class="bt br bl b--black-10 flex-ns justify-between flex-wrap items-center">
-  		<div class="pa3 flex items-center">
-  			<input class="pa2 br2 b--black-10"></input>
-  			<button class="bg-blue white bg-animate hover-bg-dark-blue fw6 br2 pv2 ph3 ml2">Save</button>
-  		</div>
-  		<div class="pa3">
-  			<span class="pr3">0<i class="fa fa-user pl1"></i></span>
-  			<button class="dark-blue hover-blue"><i class="fa fa-pen pr3"></i></button>
-  			<button class="dark-blue hover-blue"><i class="fa fa-trash"></i></button>
-  		</div>
-  	</div>
 
   	<div class="bt br bl b--black-10 flex-ns justify-between flex-wrap items-center">
   		<div class="pa3">Metropolitan Public Defender</div>
   		<div class="pa3">
-  			<span class="pr3">2<i class="fa fa-user pl1"></i></span>
-  			<button class="dark-blue hover-blue"><i class="fa fa-pen pr3"></i></button>
-  			<button class="dark-blue hover-blue"><i class="fa fa-trash"></i></button>
+        <span class="pr3">
+          4
+          <span class="visually-hidden">User count</span>
+          <i aria-hidden="true" class="fa fa-user pl1"></i>
+        </span>
+  			<button aria-label="edit group" class="navy hover-dark-blue">
+          <i aria-hidden="true" class="fa fa-pen pr3"></i>
+        </button>
+  			<button aria-label="delete group" class="navy hover-dark-blue">
+          <i aria-hidden="true" class="fa fa-trash"></i>
+        </button>
   		</div>
   	</div>
 
   	<div class="bt br bl b--black-10 flex-ns justify-between flex-wrap items-center">
   		<div class="pa3">Royce, Jennings, & Coldwater</div>
   		<div class="pa3">
-  			<span class="pr3">2<i class="fa fa-user pl1"></i></span>
-  			<button class="dark-blue hover-blue"><i class="fa fa-pen pr3"></i></button>
-  			<button class="dark-blue hover-blue"><i class="fa fa-trash"></i></button>
+        <span class="pr3">
+          2
+          <span class="visually-hidden">User count</span>
+          <i aria-hidden="true" class="fa fa-user pl1"></i>
+        </span>
+  			<button aria-label="edit group" class="navy hover-dark-blue">
+          <i aria-hidden="true" class="fa fa-pen pr3"></i>
+        </button>
+  			<button aria-label="delete group" class="navy hover-dark-blue">
+          <i aria-hidden="true" class="fa fa-trash"></i>
+        </button>
   		</div>
   	</div>
   </div>
@@ -45,7 +63,7 @@ title: Admin
 	<section class="cf bg-white shadow br3 mb5">
     <div class="pv4 ph3">
       <h1 class="f3 fw6 dib">Users</h1>
-      <button class="bg-dark-blue white bg-animate hover-bg-blue fw6 br2 pv2 ph3 fr">New User</button>
+      <button class="bg-navy white bg-animate hover-bg-dark-blue fw6 br2 pv2 ph3 fr">New User</button>
     </div>
 
     <div class="overflow-auto">

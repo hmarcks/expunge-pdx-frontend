@@ -1,6 +1,6 @@
 ---
 layout: site
-title: Oregon Record Expunge Helper
+title: Record Expunge Helper Oregon
 ---
 
 <main class="mw8 center ph2">
@@ -9,40 +9,43 @@ title: Oregon Record Expunge Helper
           class="login-form"
           id="LoginForm"
           aria-label="Record Expunge Login Form">
-      <h1 class="f4 fw6 dib mb3">Oregon eCourt Case Information</h1>
-      <p class="mb4">Log in to OECI to search and analyse criminal records for expungement.</p>
-      <div class="form-group mt4">
-        <label htmlFor="name"
-               class="db mb1 fw6">
-          User ID
-        </label>
-        <input id="name"
-               class="w-100 mb4 pa3 br2 b--black-10"
-               type="text"
-               aria-describedby="name-desc"/>
-      </div>
-      <div class="form-group">
+      <fieldset>
+        <legend class="f4 fw6 dib pb3">Oregon eCourt Case Information</legend>
+        <p class="mb4">Log in to OECI to search and analyse criminal records for expungement.</p>
+        <div class="mt4">
+          <label htmlFor="name"
+                 class="db mb1 fw6">
+            User ID
+          </label>
+          <input id="name"
+                 class="w-100 mb4 pa3 br2 b--black-20"
+                 type="text"
+                 aria-describedby="name-desc"/>
+        </div>
         <label htmlFor="password"
                class="db mb1 fw6">
           Password
         </label>
-        <input class="w-100 mb4 pa3 br2 b--black-10"
+        <input class="w-100 mb4 pa3 br2 b--black-20"
                type="password"
                id="password"
                aria-describedby="password-desc"/>
-      </div>
-      <div class="form-group">
         <a
            href="/search"
            class="{% include button.html %}">
           Log In
         </a>
-        <div class="bg-washed-red mb4 pa3 br3 fw6">All fields are required.</div>
-        <div class="bg-washed-red mb4 pa3 br3 fw6">User ID and password do not match.</div>
-        <div class="bg-washed-red mb4 pa3 br3 fw6">Technical difficulties, please try again later.</div>
-        <a class="db tc link underline hover-blue" href="https://publicaccess.courts.oregon.gov/PublicAccessLogin/Login.aspx">Oregon eCourt Case Information website</a>
-        </>
+        <!-- Change to <button> when in app -->
+      </fieldset>
+      <div role="alert" class="mb4">
+        <p class="bg-washed-red mb3 pa3 br3 fw6">All fields are required.</p>
+        <p class="bg-washed-red mb3 pa3 br3 fw6">User ID and password do not match.</p>
+        <p class="bg-washed-red mb3 pa3 br3 fw6">Technical difficulties, please try again later.</p>
       </div>
+      <a class="db tc link underline hover-blue" 
+         href="https://publicaccess.courts.oregon.gov/PublicAccessLogin/Login.aspx">
+        Oregon eCourt Case Information website
+      </a>
     </form>
   </section>
 </main>
