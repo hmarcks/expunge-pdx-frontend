@@ -77,8 +77,8 @@ title: Design System
     <p class="lh-copy measure-wide mb5">Sometimes there isn’t a good HTML element to describe an element, so we can use roles. An example is using <code>role="alert"</code> on a div since there isn’t a better HTML element. Roles aren’t needed when there is a good HTML element to use. For example, <code>&lt;button&gt;</code> is better than <code>&lt;div role="button"&gt;</code>.</p>
 
     <h3 class="f3 fw6 mb3" id="css-framework">CSS Framework</h3>
-    <p class="lh-copy measure-wide mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like modular/BEM. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as custom colors to offer higher contrast) and put together some custom components below.</p>
-    <p class="fw6 mb5"><a href="https://tachyons.io/docs" class="link underline">Tachyons documentation for composing styles</a></p>
+    <p class="lh-copy measure-wide mb3">We use a css framework called <a href="https://tachyons.io" class="link underline">Tachyons</a>. It's a "functional" or "<a href="https://css-tricks.com/lets-define-exactly-atomic-css" class="link underline">atomic</a>" approach as opposed to others like <a href="http://getbem.com/introduction/" class="link underline">modular/BEM</a>. For complex situations that Tachyons can't cover, we use BEM. We mostly stick with the constraints Tachyons has defined (such as their scale for spacing and typography), but we have made some modifications (such as custom colors to offer higher contrast) and put together some custom components below.</p>
+    <p class="mb5"><a href="https://tachyons.io/docs" class="link underline">Tachyons documentation for composing styles</a></p>
 
     <h2 class="f2 fw6 bt b--black-10 pt4 mb4">Style</h2>
 
@@ -87,48 +87,28 @@ title: Design System
     <p class="lh-copy mb3 measure-wide">Ensure there is sufficient color contrast between text and its background. You can use <a href="https://snook.ca/technical/colour_contrast/colour.html" class="link underline">this tool</a> to check your combinations.</p>
     <p class="lh-copy measure-wide mb3">Color should not be the sole means of communication. People with color blindness may not be able to differentiate some colors. <a href="http://colororacle.org" class="link underline">Color Oracle</a> is a good tool to avoid bad combinations. This also helps people with low or no vision.</p>
 
-    <div class="bg-white pt3 ph3 mb5">
-      <div class="flex flex-wrap">
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-green white pa3">$green</div>
-          </div>
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-blue white pa3">$blue</div>
-          </div>
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-dark-blue white pa3">$dark-blue</div>
-          </div>
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-purple white pa3">$purple</div>
-          </div>
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-red white pa3">$red</div>
-          </div>
+    <div class="bg-white pa2 mb5">
+      <div class="mb2">
+        <div class="bg-blue white pa3">$blue</div>
+        <div class="bg-dark-blue white pa3">$dark-blue</div>
+        <div class="bg-washed-blue pa3">$washed-blue</div>
       </div>
-      <div class="flex flex-wrap">
-          <div class="mb3 w-50 w-20-l bg-washed-green">
-              <div class="pa3">$washed-green</div>
-          </div>
-          <div class="mb3 w-50 w-20-l bg-washed-blue">
-              <div class="pa3">$washed-blue</div>
-          </div>
-          <div class="mb3 w-50 w-20-l bg-washed-purple">
-              <div class="pa3">$washed-purple</div>
-          </div>
-          <div class="mb3 w-50 w-20-l bg-washed-red">
-              <div class="pa3">$washed-red</div>
-          </div>
+      <div class="mb2">
+        <div class="bg-purple white pa3">$purple</div>
+        <div class="bg-washed-purple pa3">$washed-purple</div>
       </div>
-      <div class="flex flex-wrap">
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-black-60 white pa3">$black-60</div>
-          </div>
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-black-10 pa3">$black-10</div>
-          </div>
-          <div class="mb3 w-50 w-20-l">
-              <div class="bg-gray-blue pa3">$gray-blue</div>
-          </div>
+      <div class="mb2">
+        <div class="bg-red white pa3">$red</div>
+        <div class="bg-washed-red pa3">$washed-red</div>
+      </div>
+      <div class="mb2">
+        <div class="bg-green white pa3">$green</div>
+        <div class="bg-washed-green pa3">$washed-green</div>
+      </div>
+      <div class="mb">
+        <div class="bg-black-60 white pa3">$black-60</div>
+        <div class="bg-black-10 pa3">$black-10</div>
+        <div class="bg-gray-blue pa3">$gray-blue</div>
       </div>
     </div>
 
