@@ -6,17 +6,17 @@ title: Log in to Record Expunge
 <main class="mw8 center ph2">
   <section class="mw6 center cf mt4 mb3 pa4 pa5-ns pt4-ns bg-white shadow br3">
     {% include svg/logo.svg %}
-    <form>
+    <form noValidate>
       <fieldset>
         <legend class="visually-hidden">Log in</legend>
-        <label for="input1" class="db mt4 mb1 fw6">
+        <label for="email" class="db mt4 mb1 fw6">
           Email
         </label>
-        <input id="input1" type="email" class="w-100 mb4 pa3 br2 b--black-20">
-        <label for="input1" class="db mb1 fw6">
+        <input id="email" type="email" class="w-100 mb4 pa3 br2 b--black-20">
+        <label for="password" class="db mb1 fw6">
           Password
         </label>
-        <input id="input1" type="text" class="w-100 mb4 pa3 br2 b--black-20">
+        <input id="password" type="text" class="w-100 mb4 pa3 br2 b--black-20">
         <a class="{% include button.html %}" href="/">Log In</a>
         <!-- Change to <button> when in app -->
       </fieldset>
