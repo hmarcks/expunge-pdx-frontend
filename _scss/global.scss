@@ -8,6 +8,8 @@ $washed-purple: #efe3fa;
 $red: #a0004b;
 $washed-red: #f0e0e8;
 
+$black-blue: #676773;
+
 // Won't need these if Tachyons variables are overwriten in colors config
 .green {
   color: $green;
@@ -60,6 +62,14 @@ $washed-red: #f0e0e8;
   background-color: $gray-blue;
 }
 
+.bg-black-blue {
+  background-color: $black-blue;
+}
+
+.case-gradient {
+  background: linear-gradient(to bottom, #eaeaea 0%,#f4f4f4 100%);
+}
+
 // stock shadow too dark
 .shadow {
   box-shadow: 0 0 2px 0 rgba(59, 86, 73, 0.2),
@@ -108,21 +118,6 @@ $washed-red: #f0e0e8;
     -webkit-transform: rotate(360deg);
     tranform: rotate(360deg);
   }
-}
-
-// Search results
-
-.record--eligible {
-  box-shadow: inset 10px 0 0 $washed-green;
-}
-.record--future {
-  box-shadow: inset 10px 0 0 $washed-blue;
-}
-.record--review {
-  box-shadow: inset 10px 0 0 $washed-purple;
-}
-.record--ineligible {
-  box-shadow: inset 10px 0 0 $washed-red;
 }
 
 // Below is not in github yet

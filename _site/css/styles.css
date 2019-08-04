@@ -28,6 +28,10 @@
 
 .bg-gray-blue { background-color: #fafafe; }
 
+.bg-black-blue { background-color: #676773; }
+
+.case-gradient { background: linear-gradient(to bottom, #eaeaea 0%, #f4f4f4 100%); }
+
 .shadow { box-shadow: 0 0 2px 0 rgba(59, 86, 73, 0.2), 1px 1px 2px 0 rgba(59, 86, 73, 0.1); }
 
 .btn--search { height: 54px; }
@@ -42,14 +46,6 @@
 
 @keyframes spin { 0% { -webkit-transform: rotate(0deg); tranform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); tranform: rotate(360deg); } }
-.record--eligible { box-shadow: inset 10px 0 0 #e5f1ed; }
-
-.record--future { box-shadow: inset 10px 0 0 #e0e7f0; }
-
-.record--review { box-shadow: inset 10px 0 0 #efe3fa; }
-
-.record--ineligible { box-shadow: inset 10px 0 0 #f0e0e8; }
-
 .loading-btn { position: relative; }
 
 .loading-btn:before { content: ""; position: absolute; height: 60px; width: 60px; position: absolute; left: 50%; margin-left: -30px; top: 50%; margin-top: -30px; background-color: lightblue; border-radius: 100%; animation: sk-scaleout 0.9s infinite ease-in-out; }
