@@ -28,9 +28,9 @@
 
 .bg-gray-blue { background-color: #fafafe; }
 
-.bg-black-blue { background-color: #676773; }
+.bg-gray-blue-2 { background-color: #f1f3f7; }
 
-.case-gradient { background: linear-gradient(to bottom, #eaeaea 0%, #f4f4f4 100%); }
+.shadow-case { box-shadow: 0 -2px 3px 0 rgba(59, 86, 73, 0.1); }
 
 .shadow { box-shadow: 0 0 2px 0 rgba(59, 86, 73, 0.2), 1px 1px 2px 0 rgba(59, 86, 73, 0.1); }
 
