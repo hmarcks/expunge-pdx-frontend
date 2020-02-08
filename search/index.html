@@ -6,10 +6,11 @@ title: Search Records - Record Expunge Helper Oregon
 <main class="mw8 center ph2">
   <h1 class="f4 fw6 tc mv4">Record Search</h1>
 
-  <section class="cf mt4 mb3 pa3 pa4-ns bg-white shadow br3">
+  <section class="cf mt4 mb3 pa4 bg-white shadow br3">
     <form class="mw7 center">
-      <div class="flex flex-wrap items-end">
-        <div class="w-100 w-third-ns mb3">
+
+      <div class="flex flex-wrap items-end relative">
+        <div class="w-100 w-third-ns w-25-l mb3">
           <label for="first-name" class="db mb1 fw6">
             First Name
           </label>
@@ -20,17 +21,16 @@ title: Search Records - Record Expunge Helper Oregon
             required
             aria-invalid="false">
         </div>
-        <div class="w-100 w-third-ns mb3">
+        <div class="w-100 w-third-ns w-25-l mb3">
           <label for="middle-name" class="db mb1 fw6">
-            Middle Name
+            Middle Name <span class="fw2 f6">Optional</span>
           </label>
           <input 
             id="middle-name" 
             type="text" 
-            class="w-100 pa3 b--black-20" 
-            aria-invalid="false">
+            class="w-100 pa3 b--black-20">
         </div>
-        <div class="w-100 w-third-ns mb3">
+        <div class="w-100 w-third-ns w-25-l mb3">
           <label for="last-name" class="db mb1 fw6">
             Last Name
           </label>
@@ -41,11 +41,9 @@ title: Search Records - Record Expunge Helper Oregon
             required
             aria-invalid="false">
         </div>
-      </div>
-      <div class="flex flex-wrap items-center">
-        <div class="w-100 w-third-ns mb2 mb3-ns">
+        <div class="w-100 w-third-ns w-25-l pl2-l mb3">
           <label for="date-of-birth" class="db mb1 fw6">
-            Date of Birth <span class="fw2 f6">MM/DD/YYYY</span>
+            Date of Birth <span class="fw2 f6">mm/dd/yyyy</span>
           </label>
           <input 
             id="date-of-birth" 
@@ -55,231 +53,213 @@ title: Search Records - Record Expunge Helper Oregon
             aria-describedby="dob_msg"
             aria-invalid="false">
         </div>
-        <div class="flex justify-between w-100 w-two-thirds-ns">
-          <div class="fw5 center-ns pr3 pt3 pa3-ns mt2-ns">
-          </div>
-          <div class="mb3 mt2-ns">
-            <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv2 ph3 mt2 pl2">
-              <i aria-hidden="true" class="fas fa-plus-circle"></i>
-              &nbsp;Search
-            </button>
-          </div>
+      </div>
+
+      <div class="flex">
+        <button class="w4 tc br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv3 ph3 mr2">
+          <i aria-hidden="true" class="fas fa-plus-circle pr1"></i>Alias
+        </button>
+        <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search"  type="submit">
+          <i aria-hidden="true" class="fas fa-search pr2"></i>
+          <span class="fw7">Search</span>
+        </button>
+      </div>
+      <div role="alert">
+      </div>
+    </form>
+  </section>
+
+  <section class="cf mt4 mb3 pa4 bg-white shadow br3">
+    <form class="mw7 center">
+
+      <div class="flex flex-wrap items-end relative">
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="first-name" class="db mb1 fw6">
+            First Name
+          </label>
+          <input 
+            id="first-name" 
+            type="text" 
+            class="w-100 b--black-20 br2 br-0-ns br--left-ns pa3" 
+            required
+            aria-invalid="false">
+        </div>
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="middle-name" class="db mb1 fw6">
+            Middle Name <span class="fw2 f6">Optional</span>
+          </label>
+          <input 
+            id="middle-name" 
+            type="text" 
+            class="w-100 pa3 b--black-20">
+        </div>
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="last-name" class="db mb1 fw6">
+            Last Name
+          </label>
+          <input 
+            id="last-name" 
+            type="text" 
+            class="w-100 b--black-20 br2 bl-0-ns br--right-ns pa3" 
+            required
+            aria-invalid="false">
+        </div>
+        <div class="w-100 w-third-ns w-25-l pl2-l mb3">
+          <label for="date-of-birth" class="db mb1 fw6">
+            Date of Birth <span class="fw2 f6">mm/dd/yyyy</span>
+          </label>
+          <input 
+            id="date-of-birth" 
+            type="text" 
+            class="w-100 pa3 br2 b--black-20" 
+            required
+            aria-describedby="dob_msg"
+            aria-invalid="false">
+        </div>
+        <div class="flex items-center pb1 mb3 ml3-ns ml0-l">
+          <span class="fw5 bl bw2 b--blue bg-gray-blue-2 pa2 pr3 mr2 mb2">1 Result</span>
+          <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pa2 mb2">
+            <i aria-hidden="true" class="fas fa-times-circle pr1"></i>Remove
+          </button>
         </div>
       </div>
-      <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search"  type="submit">
-        <i aria-hidden="true" class="fas fa-search pr2"></i>
-        <span class="fw7">Search Records</span>
-      </button>
+      <!-- Add hr when alias is added -->
+      <hr class="ba b--white mt0 mb3" />
+
+      <div class="flex flex-wrap items-end relative">
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="first-name" class="db mb1 fw6">
+            First Name
+          </label>
+          <input 
+            id="first-name" 
+            type="text" 
+            class="w-100 b--black-20 br2 br-0-ns br--left-ns pa3" 
+            required
+            aria-invalid="false">
+        </div>
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="middle-name" class="db mb1 fw6">
+            Middle Name <span class="fw2 f6">Optional</span>
+          </label>
+          <input 
+            id="middle-name" 
+            type="text" 
+            class="w-100 pa3 b--black-20">
+        </div>
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="last-name" class="db mb1 fw6">
+            Last Name
+          </label>
+          <input 
+            id="last-name" 
+            type="text" 
+            class="w-100 b--black-20 br2 bl-0-ns br--right-ns pa3" 
+            required
+            aria-invalid="false">
+        </div>
+        <div class="w-100 w-third-ns w-25-l pl2-l mb3">
+          <label for="date-of-birth" class="db mb1 fw6">
+            Date of Birth <span class="fw2 f6">mm/dd/yyyy</span>
+          </label>
+          <input 
+            id="date-of-birth" 
+            type="text" 
+            class="w-100 pa3 br2 b--black-20" 
+            required
+            aria-describedby="dob_msg"
+            aria-invalid="false">
+        </div>
+        <div class="flex items-center pb1 mb3 ml3-ns ml0-l">
+          <span class="fw5 bl bw2 b--blue bg-gray-blue-2 pa2 pr3 mr2 mb2">2 Results</span>
+          <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pa2 mb2">
+            <i aria-hidden="true" class="fas fa-times-circle pr1"></i>Remove
+          </button>
+        </div>
+      </div>
+      <!-- Add hr when alias is added -->
+      <hr class="ba b--white mt0 mb3" />
+
+      <div class="flex">
+        <button class="w4 tc br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv3 ph3 mr2">
+          <i aria-hidden="true" class="fas fa-plus-circle pr1"></i>Alias
+        </button>
+        <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search" type="submit">
+          <i aria-hidden="true" class="fas fa-search pr2"></i>
+          <span class="fw7">Search</span>
+        </button>
+      </div>
+      <div role="alert">
+      </div>
+    </form>
+  </section>
+
+  <section class="cf mt4 mb3 pa4 bg-white shadow br3">
+    <form class="mw7 center">
+
+      <div class="flex flex-wrap items-end relative">
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="first-name" class="db mb1 fw6">
+            First Name
+          </label>
+          <input 
+            id="first-name" 
+            type="text" 
+            class="w-100 b--black-20 br2 br-0-ns br--left-ns pa3" 
+            required
+            aria-invalid="false">
+        </div>
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="middle-name" class="db mb1 fw6">
+            Middle Name <span class="fw2 f6">Optional</span>
+          </label>
+          <input 
+            id="middle-name" 
+            type="text" 
+            class="w-100 pa3 b--black-20">
+        </div>
+        <div class="w-100 w-third-ns w-25-l mb3">
+          <label for="last-name" class="db mb1 fw6">
+            Last Name
+          </label>
+          <input 
+            id="last-name" 
+            type="text" 
+            class="w-100 b--black-20 br2 bl-0-ns br--right-ns pa3" 
+            required
+            aria-invalid="false">
+        </div>
+        <div class="w-100 w-third-ns w-25-l pl2-l mb3">
+          <label for="date-of-birth" class="db mb1 fw6">
+            Date of Birth <span class="fw2 f6">mm/dd/yyyy</span>
+          </label>
+          <input 
+            id="date-of-birth" 
+            type="text" 
+            class="w-100 pa3 br2 b--black-20" 
+            required
+            aria-describedby="dob_msg"
+            aria-invalid="false">
+        </div>
+      </div>
+
+      <div class="flex">
+        <button class="w4 tc br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv3 ph3 mr2">
+          <i aria-hidden="true" class="fas fa-plus-circle pr1"></i>Alias
+        </button>
+        <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search"  type="submit">
+          <i aria-hidden="true" class="fas fa-search pr2"></i>
+          <span class="fw7">Search</span>
+        </button>
+      </div>
       <div role="alert">
         <!-- Show if the date format is incorrect. We should also allow for "-" along with "/" and not worry about leading zeros. -->
-        <p id="dob_msg" class="bg-washed-red mv4 pa3 br3 fw6">The date format must be MM/DD/YYYY.</p>
+        <p id="dob_msg" class="bg-washed-red mv3 pa3 br3 fw6">The date format must be MM/DD/YYYY.</p>
         <!-- Show if any of the services are down. If there's no internet connection we would ideally have a different message, but that's a nice-to-have. -->
-        <p class="bg-washed-red mv4 pa3 br3 fw6">Technical error, please try again in a few minutes.</p>
+        <p class="bg-washed-red mv3 pa3 br3 fw6">Technical error, please try again in a few minutes.</p>
       </div>
     </form>
   </section>
-
-  <section class="cf mt4 mb3 pa3 pa4-ns bg-white shadow br3">
-    <form class="mw7 center">
-      <div class="flex flex-wrap items-end">
-        <div class="w-100 w-third-ns mb3">
-          <label for="first-name" class="db mb1 fw6">
-            First Name
-          </label>
-          <input 
-            id="first-name" 
-            type="text" 
-            class="w-100 b--black-20 br2 br-0-ns br--left-ns pa3" 
-            required
-            aria-invalid="false">
-        </div>
-        <div class="w-100 w-third-ns mb3">
-          <label for="middle-name" class="db mb1 fw6">
-            Middle Name
-          </label>
-          <input 
-            id="middle-name" 
-            type="text" 
-            class="w-100 pa3 b--black-20" 
-            aria-invalid="false">
-        </div>
-        <div class="w-100 w-third-ns mb3">
-          <label for="last-name" class="db mb1 fw6">
-            Last Name
-          </label>
-          <input 
-            id="last-name" 
-            type="text" 
-            class="w-100 b--black-20 br2 bl-0-ns br--right-ns pa3" 
-            required
-            aria-invalid="false">
-        </div>
-      </div>
-      <div class="flex flex-wrap items-center">
-        <div class="w-100 w-third-ns mb2 mb3-ns pr2-ns">
-          <label for="date-of-birth" class="db mb1 fw6">
-            Date of Birth <span class="fw2 f6">MM/DD/YYYY</span>
-          </label>
-          <input 
-            id="date-of-birth" 
-            type="text" 
-            class="w-100 pa3 br2 b--black-20" 
-            required
-            aria-describedby="dob_msg"
-            aria-invalid="false">
-        </div>
-        <div class="flex justify-between w-100 w-two-thirds-ns">
-          <div class="fw5 pr3 pt3 pa3-ns mt2-ns">
-            2 Unique Results
-          </div>
-          <div class="mb3 mt2-ns">
-            <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv2 ph3 mt2">
-              <i aria-hidden="true" class="fas fa-times-circle"></i>
-              &nbsp;Remove
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <hr class="bb b--black-05 mt2 mt3-ns mb3 mb4-ns" />
-
-      <div class="flex flex-wrap items-end">
-        <div class="w-100 w-third-ns mb3">
-          <label for="first-name" class="db mb1 fw6">
-            First Name
-          </label>
-          <input 
-            id="first-name" 
-            type="text" 
-            class="w-100 b--black-20 br2 br-0-ns br--left-ns pa3" 
-            required
-            aria-invalid="false">
-        </div>
-        <div class="w-100 w-third-ns mb3">
-          <label for="middle-name" class="db mb1 fw6">
-            Middle Name
-          </label>
-          <input 
-            id="middle-name" 
-            type="text" 
-            class="w-100 pa3 b--black-20" 
-            aria-invalid="false">
-        </div>
-        <div class="w-100 w-third-ns mb3">
-          <label for="last-name" class="db mb1 fw6">
-            Last Name
-          </label>
-          <input 
-            id="last-name" 
-            type="text" 
-            class="w-100 b--black-20 br2 bl-0-ns br--right-ns pa3" 
-            required
-            aria-invalid="false">
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center">
-        <div class="w-100 w-third-ns mb2 mb3-ns pr2-ns">
-          <label for="date-of-birth" class="db mb1 fw6">
-            Date of Birth <span class="fw2 f6">MM/DD/YYYY</span>
-          </label>
-          <input 
-            id="date-of-birth" 
-            type="text" 
-            class="w-100 pa3 br2 b--black-20" 
-            required
-            aria-describedby="dob_msg"
-            aria-invalid="false">
-        </div>
-        <div class="flex justify-between w-100 w-two-thirds-ns">
-          <div class="fw5 pr3 pt3 pa3-ns mt2-ns">
-            1 Unique Result
-          </div>
-          <div class="mb3 mt2-ns">
-            <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv2 ph3 mt2">
-              <i aria-hidden="true" class="fas fa-times-circle"></i>
-              &nbsp;Remove
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <hr class="bb b--black-05 mt2 mt3-ns mb3 mb4-ns" />
-
-      <div class="flex flex-wrap items-end">
-        <div class="w-100 w-third-ns mb3">
-          <label for="first-name" class="db mb1 fw6">
-            First Name
-          </label>
-          <input 
-            id="first-name" 
-            type="text" 
-            class="w-100 b--black-20 br2 br-0-ns br--left-ns pa3" 
-            required
-            aria-invalid="false">
-        </div>
-        <div class="w-100 w-third-ns mb3">
-          <label for="middle-name" class="db mb1 fw6">
-            Middle Name
-          </label>
-          <input 
-            id="middle-name" 
-            type="text" 
-            class="w-100 pa3 b--black-20" 
-            aria-invalid="false">
-        </div>
-        <div class="w-100 w-third-ns mb3">
-          <label for="last-name" class="db mb1 fw6">
-            Last Name
-          </label>
-          <input 
-            id="last-name" 
-            type="text" 
-            class="w-100 b--black-20 br2 bl-0-ns br--right-ns pa3" 
-            required
-            aria-invalid="false">
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center">
-        <div class="w-100 w-third-ns mb2 mb3-ns pr2-ns">
-          <label for="date-of-birth" class="db mb1 fw6">
-            Date of Birth <span class="fw2 f6">MM/DD/YYYY</span>
-          </label>
-          <input 
-            id="date-of-birth" 
-            type="text" 
-            class="w-100 pa3 br2 b--black-20" 
-            required
-            aria-describedby="dob_msg"
-            aria-invalid="false">
-        </div>
-        <div class="flex justify-between w-100 w-two-thirds-ns">
-          <div class="fw5 pr3 pt3 pa3-ns mt2-ns">
-            2 Unique Results
-          </div>
-          <div class="mb3 mt2-ns">
-            <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv2 ph3 mt2">
-              <i aria-hidden="true" class="fas fa-times-circle"></i>
-              &nbsp;Remove
-            </button>
-            <button class="br2 bg-gray-blue-2 link hover-dark-blue mid-gray fw5 pv2 ph3 mt2 pl2">
-              <i aria-hidden="true" class="fas fa-plus-circle"></i>
-              &nbsp;Search
-            </button>
-          </div>
-        </div>
-      </div>
-      <button class="br2 bg-blue white bg-animate hover-bg-dark-blue db w-100 tc pv3 btn--search"  type="submit">
-        <i aria-hidden="true" class="fas fa-search pr2"></i>
-        <span class="fw7">Search Records</span>
-      </button>
-      <div role="alert">
-      </div>
-    </form>
-  </section>
-
-
 
 
   <div role="status">
